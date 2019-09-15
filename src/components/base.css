@@ -37,7 +37,7 @@ a:hover {
 }
 
 .squiggles {
-  position: fixed;
+  position: absolute;
   z-index: -100;
 }
 
