@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Avenir";
+  font-family: "inter";
   font-weight: 400;
   font-style: normal;
-  src: url("/avenir-400.woff2") format("woff2");
+  src: url("/inter/inter-regular.woff2") format("woff2");
   font-display: swap;
 }
 
 body {
-  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
+  font-family: "inter", Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  color: #373F49;
-  background: #eee;
+  color: #2C649C;
+  background: #fff;
   margin: 0;
 }
 
@@ -28,7 +28,12 @@ h3 {
 }
 
 a {
-  color: currentColor;
+  color: #243953;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4E9CD9;
 }
 
 .wrapper {
