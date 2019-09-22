@@ -1,7 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
-
+import AshlynBanner from './assets/ashlyn-banner.svg'
+import animationStyles from './animation.css'
 import styles from './hero.module.css'
+import SubscribeForm from './hero-form.js'
+
 
 // export default ({ data }) => (
 //   <div className={styles.hero}>
@@ -14,12 +17,24 @@ import styles from './hero.module.css'
 //   </div>
 // )
 
-// get svg for squiggles
 
-// import Squiggles from './assets/squiggles.svg'
 
 export default ({ data }) => (
-  <div>
-      <div style={{ padding: '200px' }} ></div>
+  <div class={styles.hero}>
+    <AshlynBanner />
+    <div class={styles.heroRight}>
+      <div>
+        <div class={styles.websiteName}>ashlyn.app</div>
+      </div>
+      <div>
+        <h1 class={styles.heroHeadline}>handbooks</h1>
+        <div class={styles.heroSubtitle}>
+          <div>for building good digital products</div>
+          <div> and other things</div>
+        </div>
+      </div>
+      <SubscribeForm></SubscribeForm>
+    </div>
   </div>
 )
+

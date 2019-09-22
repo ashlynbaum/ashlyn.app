@@ -1,26 +1,7 @@
 .hero {
-  position: relative;
-  color: #fff;
-  text-align: center;
+  display: flex
 }
 
-.heroImage {
-/*    Ensure golden ratio for the hero size while limiting it to some extend to
-    the viewport width
-*/
-  height: 61.8vh;
-  max-height: 400px;
-}
-
-.heroDetails {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.7);
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
-  font-size: 14px;
-  padding: 0 0.5em;
-}
 
 @media(min-width: 600px) {
   .heroDetails {
@@ -36,10 +17,108 @@
 
 .heroHeadline {
   margin: 0;
+  font-size: 54px;
+  line-height: 65px;
 }
 
-.heroTitle {
+.heroSubtitle {
   margin: 0;
   font-size: 1.125em;
-  font-weight: bold;
+  color: #3B4653;
+  font-size: 16px;
 }
+
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  align-items: auto;
+}
+
+.websiteName {
+  display: initial;
+  align-self: flex-start;
+  padding-bottom: 2px;
+  border-bottom: 4px solid #D4DAE1;
+}
+
+.emailWrapper {
+  font-family: inherit;
+}
+
+.helperText {
+ font-size: 14px;
+ line-height: 19px;
+ padding-top: 10px;
+}
+
+.emailForm {
+  height: 38px;
+  font-size: 16px;
+  background-image: url('../static/ic-outline-email.svg');
+  background-repeat: no-repeat;
+  padding: 0 6px 0 40px;
+  border: 1px solid #B3BDC7;
+  border-radius: 3px;
+  background-position: left;
+  background-position-x: 8px;
+  background-size: 24px;
+  margin-right: 14px;
+
+}
+
+.emailForm::placeholder {
+  color: #B3BDC7;
+  font-size: 16px;
+}
+
+.emailWrapper:hover .emailForm {
+  border: 1px solid #4E9CD9;
+}
+
+.emailWrapper:hover .helperText {
+  color: #4E9CD9;
+}
+
+.emailForm:focus {
+  outline: none;
+  box-shadow: 0px 0px 16px #DCEFF9;
+}
+
+.submitButton {
+  height: 40px;
+  border: none;
+  background: #45B980;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding: 0 40px 0 16px;
+  background-size: 24px;
+}
+
+.submitButton:hover {
+  background: #5ED095;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 40px;
+  background-size: 24px;
+}
+
+.submitButton:active, .submitButton:focus, .submitButton:visited {
+  background: #2A7657;
+  outline: none;
+  box-shadow: 0px 0px 6px #2A7657;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 40px;
+  background-size: 24px;
+}
+

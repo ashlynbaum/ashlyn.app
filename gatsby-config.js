@@ -34,9 +34,15 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
+          include: /assets/
         }
       }
+    },
+    { resolve: 'gatsby-plugin-mailchimp',
+        options: {
+            endpoint: '"https://gmail.us20.list-manage.com/subscribe/post?u=60af8c8f369265bc4fef99726&amp;id=73c6d7ddc5',
+        },
     }
   ],
 }
+
