@@ -22,4 +22,6 @@ Run a production build into `./public` and publish the site to GitHub pages.
 Removes all dependencies, scripts and data from the installation script.
 
 
+notion integration
 
+`yarn add gatsby-source-notion-database`
