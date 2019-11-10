@@ -22,7 +22,41 @@ module.exports = {
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        // In your gatsby-transformer-remark plugin array
+        // CommonMark mode (default: true)
+         commonmark: true,
+         // Footnotes mode (default: true)
+         footnotes: true,
+         // Pedantic mode (default: true)
+         pedantic: true,
+         // GitHub Flavored Markdown mode (default: true)
+         gfm: true,
+         // Plugins configs
+        plugins: [{
+          resolve: 'gatsby-remark-emojis',
+          options: {
+            // Deactivate the plugin globally (default: true)
+            active : true,
+            // Add a custom css class
+            class  : 'emoji-icon',
+            // Select the size (available size: 16, 24, 32, 64)
+            size   : 64,
+            // Add custom styles
+            styles : {
+              display      : 'inline',
+              margin       : '0',
+              'margin-top' : '1px',
+              position     : 'relative',
+              top          : '5px',
+              width        : '25px'
+            }
+          }
+        }]
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
