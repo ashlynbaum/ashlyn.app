@@ -8,22 +8,20 @@ import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const handbooks = get(this, 'props.data.allSourceConfig.edges')
 
     return (
       <Layout location={this.props.location} >
         <div>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+        <Helmet />
+        <Hero/>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
-              {posts.map(({ node }) => {
+              {handbooks.map(({ node }) => {
                 return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
+                  <li key={node.id}>
+                    <ArticlePreview handbook={node} />
                   </li>
                 )
               })}
@@ -37,51 +35,13 @@ class RootIndex extends React.Component {
 
 export default RootIndex
 
-export const pageQuery = graphql`
-  query HomeQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+export const query = graphql`
+  {
+    allSourceConfig {
       edges {
         node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
+          id
           name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
         }
       }
     }
