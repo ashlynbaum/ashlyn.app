@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
         
         productPages.forEach((page, index) => {
           createPage({
-            path: `/handbook/productfeature/${page.url}/`,
+            path: `/product-handbook/${page.url}/`,
             component: handbookPage,
             context: {
               id: page.id,
