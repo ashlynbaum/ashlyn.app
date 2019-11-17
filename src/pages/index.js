@@ -5,11 +5,13 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import HandbookPreview from '../components/handbook-preview'
 
 class RootIndex extends React.Component {
   render() {
-    const handbooks = get(this, 'props.data.allSourceConfig.edges')
-
+    const handbooks = get(this, 'props.data.allSourceConfig.nodes')
+    const productFeature = get(this, 'props.data.allProduct')
+    console.log('product', productFeature.nodes[0].Name)
     return (
       <Layout location={this.props.location} >
         <div>
@@ -17,7 +19,7 @@ class RootIndex extends React.Component {
         <Hero/>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+            {/* <ul className="article-list">
               {handbooks.map(({ node }) => {
                 return (
                   <li key={node.id}>
@@ -25,7 +27,18 @@ class RootIndex extends React.Component {
                   </li>
                 )
               })}
+            </ul> */}
+              {/* <Link to={`/blog/${handbook.name}`}>{handbook.name}</Link> */}
+              {/* link to product - using workbook/blog pages 
+              passing through product handbook
+              link to slug on welcome*/}
+            <ul className="article-list">
+              <li>
+                <HandbookPreview handbook={productFeature} name="Product Feature Development" description="Building great products one feature at a time."/>
+              </li>
             </ul>
+
+
           </div>
         </div>
       </Layout>
@@ -35,15 +48,19 @@ class RootIndex extends React.Component {
 
 export default RootIndex
 
-export const query = graphql`
-  {
-    allSourceConfig {
-      edges {
-        node {
-          id
-          name
-        }
-      }
+export const query =  graphql`
+{
+  allProduct(sort: {fields: Name, order: ASC}){
+    nodes {
+      Cover
+      Name
+      url
     }
   }
+  allSourceConfig {
+    nodes {
+      name
+    }
+  }
+}
 `
