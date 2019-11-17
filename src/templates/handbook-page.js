@@ -7,14 +7,16 @@ import Layout from '../components/layout'
 
 import heroStyles from '../components/hero.module.css'
 
-class BlogPostTemplate extends React.Component {
+class HandbookPageTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    //product page only 
+    // [todo]: if page is all products use allProduct, else use handbook data
+    const page = get(this.props, 'data.allProduct.nodes[0]')
+    // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        {/* <div style={{ background: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={heroStyles.hero}>
             <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
@@ -34,34 +36,56 @@ class BlogPostTemplate extends React.Component {
               }}
             />
           </div>
-        </div>
+        </div> */}
+
+        {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
+        <h2>{page.Name}</h2>
+        <div
+              dangerouslySetInnerHTML={{
+                __html: page.html,
+              }}
+            />
+
       </Layout>
     )
   }
 }
 
-export default BlogPostTemplate
+export default HandbookPageTemplate
 
+// export const pageQuery = graphql`
+//   query BlogPostBySlug($slug: String!) {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     contentfulBlogPost(slug: { eq: $slug }) {
+//       title
+//       publishDate(formatString: "MMMM Do, YYYY")
+//       heroImage {
+//         fluid(maxWidth: 1180, background: "rgb:000000") {
+//           ...GatsbyContentfulFluid_tracedSVG
+//         }
+//       }
+//       body {
+//         childMarkdownRemark {
+//           html
+//         }
+//       }
+//     }
+//   }
+// `
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    contentfulBlogPost(slug: { eq: $slug }) {
-      title
-      publishDate(formatString: "MMMM Do, YYYY")
-      heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulFluid_tracedSVG
-        }
-      }
-      body {
-        childMarkdownRemark {
-          html
-        }
-      }
+query HandbookById($id: String!) {
+  allProduct(filter: {id: {eq: $id}}){
+    nodes {
+      Cover
+      Name
+      id
+      url
+      html
     }
   }
+}
 `

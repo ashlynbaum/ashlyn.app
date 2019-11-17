@@ -5,20 +5,19 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const handbookPage = path.resolve('./src/templates/handbook-page.js')
     resolve(
       graphql(
         `
-          {
-            allContentfulBlogPost {
-              edges {
-                node {
-                  title
-                  slug
-                }
-              }
+        {
+          allProduct(sort: {fields: Name, order: ASC}){
+            nodes {
+              id
+              Name
+              url
             }
           }
+        }
           `
       ).then(result => {
         if (result.errors) {
@@ -26,13 +25,18 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const posts = result.data.allContentfulBlogPost.edges
-        posts.forEach((post, index) => {
+        // const posts = result.data.allContentfulBlogPost.edges
+        const productPages = result.data.allProduct.nodes
+        
+        productPages.forEach((page, index) => {
           createPage({
-            path: `/blog/${post.node.slug}/`,
-            component: blogPost,
+            path: `/handbook/productfeature/${page.url}/`,
+            component: handbookPage,
             context: {
-              slug: post.node.slug
+              id: page.id,
+              slug: page.url,
+              cover: page.Cover,
+              name: page.Name,
             },
           })
         })

@@ -35,7 +35,7 @@ export default ({ handbook, name, description }) => (
       <h3>{name}</h3>
       <p>{description}</p>
       <h3 className={styles.previewTitle}>
-        <Link to={`/handbook/${handbook.nodes[0].url}`}>{handbook.nodes[0].Name}</Link>
+        <Link to={`/handbook/productfeature/${handbook.nodes[0].url}`}>{handbook.nodes[0].Name}</Link>
       </h3>
       
 
