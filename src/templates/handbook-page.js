@@ -5,14 +5,14 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import heroStyles from '../components/hero.module.css'
-import HandbookNavItem from '../components/handbook-nav-item'
+import HandbookNavList from '../components/handbook-nav-list'
 
 class HandbookPageTemplate extends React.Component {
   render() {
     //product page only 
     // [todo]: if page is products use allProduct, else use handbook data
     const page = get(this.props, 'data.productPage.nodes[0]')
-    const handbookNav = get(this.props, 'data.productNav.nodes')
+    const handbookNavList = get(this.props, 'data.productNav.nodes')
     // console.log('page context:', this.props)
 
     // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -43,13 +43,9 @@ class HandbookPageTemplate extends React.Component {
 
         {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
         {/* <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} /> */}
-        <ul>
-        {handbookNav.map((item, i) => {
-          return (
-            <HandbookNavItem item={item.Name} link={item.url} id={i}/>
-          )
-        })}
-        </ul>
+
+        <HandbookNavList handbookNavList={handbookNavList} />
+
 
         {/* <HandbookNav handbookNav={handbookNav} /> */}
         <h2 className="section-headline">{page.Name}</h2>
@@ -67,29 +63,7 @@ class HandbookPageTemplate extends React.Component {
 
 export default HandbookPageTemplate
 
-// export const pageQuery = graphql`
-//   query BlogPostBySlug($slug: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     contentfulBlogPost(slug: { eq: $slug }) {
-//       title
-//       publishDate(formatString: "MMMM Do, YYYY")
-//       heroImage {
-//         fluid(maxWidth: 1180, background: "rgb:000000") {
-//           ...GatsbyContentfulFluid_tracedSVG
-//         }
-//       }
-//       body {
-//         childMarkdownRemark {
-//           html
-//         }
-//       }
-//     }
-//   }
-// `
+
 export const pageQuery = graphql`
 query HandbookById($id: String!) {
   productPage: allProduct(filter: {id: {eq: $id}}){
