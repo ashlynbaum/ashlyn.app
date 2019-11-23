@@ -25,25 +25,18 @@ class HandbookPageTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        {/* <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
-            <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
-          </div>
-          
-        </div> */}
 
-        {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
+
+        {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
+        <Helmet title={`${page.Name} | ${page.Name}`} />
 
 
 
 
 
-
-
-        {/* {page.Cover &&
-        <SVG src={coverImageUrl} /> } */}
+        <h1>{page.Name}</h1>
         {page.Cover && <img src={coverImageUrl} />}
+        <h2>{page.Subheading}</h2>
 
         <HandbookNavList handbookNavList={handbookNavList} />
 
@@ -72,6 +65,7 @@ query HandbookById($id: String!) {
       id
       url
       html
+      Subheading
     }
   }
   productNav: allProduct {

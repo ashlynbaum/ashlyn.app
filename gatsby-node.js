@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
         {
-          allProduct(sort: {fields: Name, order: ASC}){
+          allProduct(sort: {fields: Order, order: ASC}){
             nodes {
               id
               Name

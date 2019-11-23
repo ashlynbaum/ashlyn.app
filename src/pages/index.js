@@ -17,29 +17,21 @@ class RootIndex extends React.Component {
         <div>
         <Helmet />
         <Hero/>
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            {/* <ul className="article-list">
-              {handbooks.map(({ node }) => {
-                return (
-                  <li key={node.id}>
-                    <ArticlePreview handbook={node} />
-                  </li>
-                )
-              })}
-            </ul> */}
-              {/* <Link to={`/blog/${handbook.name}`}>{handbook.name}</Link> */}
-              {/* link to product - using workbook/blog pages 
-              passing through product handbook
-              link to slug on welcome*/}
-            <ul className="article-list">
-              <li>
-                <HandbookPreview handbook={productFeature} name="Product Feature Development" description="Building great products one feature at a time."/>
-              </li>
-            </ul>
+        <div className="wrapper">
+          <h2 className="section-headline">Recent articles</h2>
 
 
-          </div>
+          {/* link to product - using workbook/blog pages 
+          passing through product handbook
+          link to slug on welcome*/}
+          <ul className="article-list">
+            <li>
+              <HandbookPreview handbook={productFeature} name="Product Feature Development" description="Building great products one feature at a time."/>
+            </li>
+          </ul>
+
+
+        </div>
         </div>
       </Layout>
     )
