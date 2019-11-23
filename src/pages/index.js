@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import BookCover from '../components/book-cover'
 import HandbookPreview from '../components/handbook-preview'
 
 class RootIndex extends React.Component {
@@ -20,7 +20,7 @@ class RootIndex extends React.Component {
           <div className="wrapper">
             <h2 className="section-headline">list of handbooks</h2>
 
-
+            <BookCover />
             {/* link to product - using workbook/blog pages 
             passing through product handbook
             link to slug on welcome*/}
