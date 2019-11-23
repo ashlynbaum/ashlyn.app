@@ -5,29 +5,40 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import HandbookPreview from '../components/handbook-preview'
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
-
+    const handbooks = get(this, 'props.data.allSourceConfig.nodes')
+    const productFeature = get(this, 'props.data.allProduct')
+    console.log('product', productFeature.nodes[0].Name)
     return (
       <Layout location={this.props.location} >
         <div>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+        <Helmet />
+        <Hero/>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
+            {/* <ul className="article-list">
+              {handbooks.map(({ node }) => {
                 return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
+                  <li key={node.id}>
+                    <ArticlePreview handbook={node} />
                   </li>
                 )
               })}
+            </ul> */}
+              {/* <Link to={`/blog/${handbook.name}`}>{handbook.name}</Link> */}
+              {/* link to product - using workbook/blog pages 
+              passing through product handbook
+              link to slug on welcome*/}
+            <ul className="article-list">
+              <li>
+                <HandbookPreview handbook={productFeature} name="Product Feature Development" description="Building great products one feature at a time."/>
+              </li>
             </ul>
+
+
           </div>
         </div>
       </Layout>
@@ -37,53 +48,19 @@ class RootIndex extends React.Component {
 
 export default RootIndex
 
-export const pageQuery = graphql`
-  query HomeQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
+export const query =  graphql`
+{
+  allProduct(sort: {fields: Name, order: ASC}){
+    nodes {
+      Cover
+      Name
+      url
     }
   }
+  allSourceConfig {
+    nodes {
+      name
+    }
+  }
+}
 `

@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import styles from './article-preview.module.css'
 
 export default ({ article }) => (
+
   <div className={styles.preview}>
     <Img alt="" fluid={article.heroImage.fluid} />
     <h3 className={styles.previewTitle}>
@@ -22,4 +23,9 @@ export default ({ article }) => (
       </p>
     ))}
   </div>
+
 )
+
+
+
+
