@@ -4,19 +4,16 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import HanbookNav from '../components/handbook-nav'
-
 import heroStyles from '../components/hero.module.css'
-import handbookNav from '../components/handbook-nav'
+import HandbookNavItem from '../components/handbook-nav-item'
 
 class HandbookPageTemplate extends React.Component {
   render() {
     //product page only 
     // [todo]: if page is products use allProduct, else use handbook data
-    const page = get(this.props, 'data.allProduct.nodes[0]')
-    const handbook = get(this.props, 'data.allProduct')
-
-    console.log('handbook', handbook)
+    const page = get(this.props, 'data.productPage.nodes[0]')
+    const handbookNav = get(this.props, 'data.productNav.nodes')
+    // console.log('page context:', this.props)
 
     // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
@@ -46,9 +43,15 @@ class HandbookPageTemplate extends React.Component {
 
         {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
         {/* <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} /> */}
+        <ul>
+        {handbookNav.map((item, i) => {
+          return (
+            <HandbookNavItem item={item.Name} link={item.url} id={i}/>
+          )
+        })}
+        </ul>
 
-        
-        {/* <HandbookNav /> */}
+        {/* <HandbookNav handbookNav={handbookNav} /> */}
         <h2 className="section-headline">{page.Name}</h2>
 
         <div
@@ -89,13 +92,19 @@ export default HandbookPageTemplate
 // `
 export const pageQuery = graphql`
 query HandbookById($id: String!) {
-  allProduct(filter: {id: {eq: $id}}){
+  productPage: allProduct(filter: {id: {eq: $id}}){
     nodes {
       Cover
       Name
       id
       url
       html
+    }
+  }
+  productNav: allProduct {
+    nodes {
+      Name
+      url
     }
   }
 }
