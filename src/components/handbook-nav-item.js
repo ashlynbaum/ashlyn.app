@@ -4,9 +4,11 @@ import styles from './navigation.module.css'
 
 export default ({ item, link, id }) => (
     <li key={item} >
-    {/* <div>{item}</div> */}
-        <Link to={`/product-handbook/${link}`}>
-                    {item}
+        <Link 
+            to={`${location.pathname}/../${link}`}
+            partiallyActive={true}
+        >
+            {item}
         </Link>
     </li>
 )
