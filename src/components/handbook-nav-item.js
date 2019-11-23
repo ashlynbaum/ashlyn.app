@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styles from './navigation.module.css'
 
 export default ({ item, link, id }) => (
-    <li key={item} >
+    <li key={link}>
         <Link 
             to={`${location.pathname}/../${link}`}
             partiallyActive={true}

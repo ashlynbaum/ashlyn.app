@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import SVG from 'react-inlinesvg';
 import Layout from '../components/layout'
 import heroStyles from '../components/hero.module.css'
 import HandbookNavList from '../components/handbook-nav-list'
@@ -42,12 +43,12 @@ class HandbookPageTemplate extends React.Component {
         </div> */}
 
         {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
-        {/* <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} /> */}
+
+        {page.Cover &&
+        <SVG src={page.Cover} /> }
 
         <HandbookNavList handbookNavList={handbookNavList} />
 
-
-        {/* <HandbookNav handbookNav={handbookNav} /> */}
         <h2 className="section-headline">{page.Name}</h2>
 
         <div
