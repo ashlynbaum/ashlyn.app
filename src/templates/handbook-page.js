@@ -7,6 +7,9 @@ import SVG from 'react-inlinesvg';
 import Layout from '../components/layout'
 import heroStyles from '../components/hero.module.css'
 import HandbookNavList from '../components/handbook-nav-list'
+import { parseImageUrl } from 'notabase/src/utils'
+
+
 
 class HandbookPageTemplate extends React.Component {
   render() {
@@ -16,7 +19,9 @@ class HandbookPageTemplate extends React.Component {
     const handbookNavList = get(this.props, 'data.productNav.nodes')
     // console.log('page context:', this.props)
 
-    // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const coverImageUrl = parseImageUrl(page.Cover[0])
+
+
 
     return (
       <Layout location={this.props.location} >
@@ -25,27 +30,20 @@ class HandbookPageTemplate extends React.Component {
           <div className={heroStyles.hero}>
             <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
           </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>
+          
         </div> */}
 
         {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
 
-        {page.Cover &&
-        <SVG src={page.Cover} /> }
+
+
+
+
+
+
+        {/* {page.Cover &&
+        <SVG src={coverImageUrl} /> } */}
+        {page.Cover && <img src={coverImageUrl} />}
 
         <HandbookNavList handbookNavList={handbookNavList} />
 
