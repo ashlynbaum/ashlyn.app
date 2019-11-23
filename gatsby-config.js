@@ -26,10 +26,10 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-source-contentful',
-      options: contentfulConfig,
-    },
+    // {
+    //   resolve: 'gatsby-source-contentful',
+    //   options: contentfulConfig,
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
