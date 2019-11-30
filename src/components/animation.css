@@ -147,7 +147,7 @@
 #dashed {
   -webkit-animation: bounce-in-fwd 1.1s 2.4s both, rotate-center 120s linear 4.1s infinite alternate;
           animation: bounce-in-fwd 1.1s 2.4s both, rotate-center 120s linear 4.1s infinite alternate;
-  transform-origin: 60% 38%;
+  transform-origin: 55% 38%;
 }
 
 @-webkit-keyframes bounce-in-fwd {

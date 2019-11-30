@@ -41,11 +41,6 @@ a:hover {
   color: #4E9CD9;
 }
 
-.squiggles {
-  position: absolute;
-  z-index: -100;
-  width: 100%;
-}
 
 .wrapper {
   width: calc(100% - 10vmin);

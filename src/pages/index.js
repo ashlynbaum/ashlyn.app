@@ -42,9 +42,10 @@ export default RootIndex
 
 export const query =  graphql`
 {
-  allProduct(sort: {fields: Name, order: ASC}){
+  allProduct(sort: {fields: Order, order: ASC}){
     nodes {
       Cover
+      Order
       Name
       url
     }

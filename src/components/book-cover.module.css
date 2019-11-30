@@ -13,8 +13,8 @@
 	background: linear-gradient(45deg,  #DAD5DC 0%, #f2ebf4 100%);
 	font-family: acumin-pro, sans-serif;
 	-webkit-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
-  -moz-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
-  box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
+	-moz-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
+	box-shadow: 13px 13px 8px 0px rgba(151, 146, 153,0.6);
 	font-weight: 400;
 	color: #2b2b2b;
 	-webkit-transform-style: preserve-3d;
@@ -97,13 +97,12 @@
 	transform: rotate(-90deg);
   }
   
-  .author{
-	font-family: acumin-pro, sans-serif;
+  .title{
 	font-weight: 400;
 	position: absolute;
-	top: 475px;
 	left: 50px;
 	opacity: .8;
+	bottom: 0;
 	}
   
   .container .front > div {
@@ -151,6 +150,7 @@
   
   .cover {
    background: linear-gradient(45deg,  #DAD5DC 0%, #f2ebf4 100%);
+   position: relative;
   }
   
   
@@ -158,9 +158,10 @@
 	font-weight: 400;
 	font-size: 13px;
 	padding-right: 20px;
+	opacity: 0.5;
   }
   
   .leftSide h2 span:last-child{
-	font-family: acumin-pro, sans-serif;
+	letter-spacing: 1px;
   } 
   
