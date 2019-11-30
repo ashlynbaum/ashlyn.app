@@ -7,12 +7,15 @@ import Layout from '../components/layout'
 import BookCover from '../components/book-cover'
 import HandbookPreview from '../components/handbook-preview'
 
+
 class RootIndex extends React.Component {
   render() {
     const handbooks = get(this, 'props.data.allSourceConfig.nodes')
     const productFeature = get(this, 'props.data.allProduct')
     // console.log('product', productFeature.nodes[0].Name)
     return (
+
+
       <Layout location={this.props.location} >
         <div>
           <Helmet />

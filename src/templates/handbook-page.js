@@ -7,7 +7,7 @@ import SVG from 'react-inlinesvg';
 import Layout from '../components/layout'
 import HandbookNavList from '../components/handbook-nav-list'
 import { parseImageUrl } from 'notabase/src/utils'
-
+import Navigation from '../components/navigation'
 
 
 class HandbookPageTemplate extends React.Component {
@@ -17,19 +17,21 @@ class HandbookPageTemplate extends React.Component {
     const page = get(this.props, 'data.productPage.nodes[0]')
     const handbookNavList = get(this.props, 'data.productNav.nodes')
     // console.log('page context:', this.props)
+    
 
     const coverImageUrl = parseImageUrl(page.Cover[0])
 
 
 
     return (
+      
       <Layout location={this.props.location} >
 
 
         {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
         <Helmet title={`${page.Name} | ${page.Name}`} />
 
-
+        <Navigation />
 
 
 
