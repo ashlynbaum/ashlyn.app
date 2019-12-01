@@ -7,6 +7,8 @@
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@mdx-js/react": "^1.5.1",
     "gatsby-image": "^2.0.38",
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-react-helmet": "^3.0.12",
@@ -24,7 +26,8 @@
     "react-helmet": "^5.2.0",
     "react-inlinesvg": "^1.2.0",
     "react-spring": "^8.0.27",
-    "sharp": "^0.22.0"
+    "sharp": "^0.22.0",
+    "theme-ui": "^0.2.49"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
