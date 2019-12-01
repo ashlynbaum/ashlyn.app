@@ -3,13 +3,12 @@ import AshlynBanner from './assets/ashlyn-banner-v2.svg'
 import styles from './hero.module.css'
 import SubscribeForm from './hero-form.js'
 import Squiggles from './assets/squiggles.svg'
-import ArrowIcon from './arrow-icon.js'
 
+// import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 
 
 export default ({ data }) => {
-
 
   return (
     <div>
@@ -32,9 +31,6 @@ export default ({ data }) => {
           </div>
           <Squiggles className={styles.squiggles} />
         </div>
-      </div>
-      <div className={styles.arrowWrapper}>
-        <ArrowIcon />
       </div>
     </div>
   ) 
