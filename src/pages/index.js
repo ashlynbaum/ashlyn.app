@@ -5,11 +5,13 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import BookCover from '../components/book-cover'
+import AshlynBanner from '../components/assets/ashlyn-banner-v2.svg'
 import HandbookPreview from '../components/handbook-preview'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import Blob1 from '../components/assets/blob1.svg'
 import Blob2 from '../components/assets/blob2.svg'
 import ArrowIcon from '../components/arrow-icon.js'
+import styles from '../components/hero.module.css'
 
 class RootIndex extends React.Component {
   render() {
@@ -18,7 +20,7 @@ class RootIndex extends React.Component {
     // console.log('product', productFeature.nodes[0].Name)
     
     return (
-    <Parallax pages={3} ref={ref => (this.parallax = ref)}>
+    <Parallax pages={4} ref={ref => (this.parallax = ref)}>
       {/* <ParallaxLayer offset={0} speed={0.5}>
         <span onClick={() => this.parallax.scrollTo(1)}>Layers can contain anything</span>
       </ParallaxLayer> */}
@@ -28,21 +30,31 @@ class RootIndex extends React.Component {
 
         <div>
           <Helmet />
-          <ParallaxLayer offset={0} speed={0.5} factor={1}>
+
+
+          <ParallaxLayer offset={0} speed={1} factor={1}>
             <Hero />
             <span onClick={() => this.parallax.scrollTo(1)}>
                 <ArrowIcon />
             </span>
           </ParallaxLayer>
+
           <ParallaxLayer offset={1.2} speed={-0.2} style={{ pointerEvents: 'none' }}>
             <Blob1 />
           </ParallaxLayer>
+
           <ParallaxLayer offset={1.5} speed={0} style={{ pointerEvents: 'none' }}>
             <Blob2 />
           </ParallaxLayer>
+
+          {/* <ParallaxLayer offset={0} speed={-1} factor={.5}>
+            <AshlynBanner className={styles.ashlynBanner}/>
+          </ParallaxLayer> */}
+
+
           
-          <ParallaxLayer offset={1} speed={0.5}>
-            <h2 className="section-headline">Strategies for you and your team to build products that people love. s</h2>
+          <ParallaxLayer offset={1.4} speed={-0.1}>
+            <h2>Strategies for you and your team to build products that people love.</h2>
             <span onClick={() => this.parallax.scrollTo(2)}>
                 <ArrowIcon />
             </span>
