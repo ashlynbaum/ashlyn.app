@@ -5,13 +5,16 @@
 }
 
 .hero {
-  display: flex;
-  justify-content: center;
   background-color: #243953;
-  height: 90vh;
   border-radius: 0 0 20px 20px;
   -webkit-clip-path: inset(0 round 0 0 20px 20px);
   clip-path: inset(0 round 0 0 20px 20px);
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
 }
 
 .shaddow {
@@ -48,7 +51,7 @@
 }
 
 .heroSubtitle {
-  margin: 0;
+  margin: 0 0 6rem 0;
   font-size: 1.125em;
   color: #F6F8FA;
   font-size: 16px;
@@ -58,10 +61,23 @@
   display: flex;
   color: #F6F8FA;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0 auto;
   align-items: auto;
   z-index: 1;
+}
+.heroLeft {
+  display: flex;
+  color: #F6F8FA;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: auto;
+  z-index: 1;
+}
+
+.websiteNameWrapper {
+  margin-bottom: 3rem;
 }
 
 .websiteName {
@@ -69,6 +85,7 @@
   align-self: flex-start;
   padding-bottom: 2px;
   border-bottom: 4px solid #4E9CD9;
+  margin-bottom: 5rem;
 }
 
 .emailWrapper {
