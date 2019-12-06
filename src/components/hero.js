@@ -4,6 +4,8 @@ import styles from './hero.module.css'
 import SubscribeForm from './hero-form.js'
 import Squiggles from './assets/squiggles.svg'
 import {useSpring, animated} from 'react-spring'
+import Navigation from './navigation.js'
+import Animation from './animation.css'
 
 // import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
