@@ -1,7 +1,36 @@
-.hero {
-  display: flex
+.arrowWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
 }
 
+.hero {
+  background-color: #243953;
+  border-radius: 0 0 20px 20px;
+  -webkit-clip-path: inset(0 round 0 0 20px 20px);
+  clip-path: inset(0 round 0 0 20px 20px);
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.shaddow {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.squiggles {
+  position: absolute;
+  /* z-index: -1; */
+  width: 100%;
+}
+
+.ashlynBanner {
+  z-index: 1;
+}
 
 @media(min-width: 600px) {
   .heroDetails {
@@ -22,25 +51,41 @@
 }
 
 .heroSubtitle {
-  margin: 0;
+  margin: 0 0 6rem 0;
   font-size: 1.125em;
-  color: #3B4653;
+  color: #F6F8FA;
   font-size: 16px;
 }
 
 .heroRight {
   display: flex;
+  color: #F6F8FA;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0 auto;
   align-items: auto;
+  z-index: 1;
+}
+.heroLeft {
+  display: flex;
+  color: #F6F8FA;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: auto;
+  z-index: 1;
+}
+
+.websiteNameWrapper {
+  margin-bottom: 3rem;
 }
 
 .websiteName {
   display: initial;
   align-self: flex-start;
   padding-bottom: 2px;
-  border-bottom: 4px solid #D4DAE1;
+  border-bottom: 4px solid #4E9CD9;
+  margin-bottom: 5rem;
 }
 
 .emailWrapper {
@@ -74,16 +119,17 @@
 }
 
 .emailWrapper:hover .emailForm {
-  border: 1px solid #4E9CD9;
+  border: 1px solid #74B9E9;
 }
 
-.emailWrapper:hover .helperText {
-  color: #4E9CD9;
+.emailWrapper:hover .helperText,
+.emailWrapper:focus .helperText {
+  color: #74B9E9;
 }
 
 .emailForm:focus {
   outline: none;
-  box-shadow: 0px 0px 16px #DCEFF9;
+  box-shadow: 0px 0px 6px #4e9cd9;
 }
 
 .submitButton {

@@ -5,8 +5,10 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import SVG from 'react-inlinesvg';
 import Layout from '../components/layout'
-import heroStyles from '../components/hero.module.css'
 import HandbookNavList from '../components/handbook-nav-list'
+import { parseImageUrl } from 'notabase/src/utils'
+import Navigation from '../components/navigation'
+
 
 class HandbookPageTemplate extends React.Component {
   render() {
@@ -15,37 +17,27 @@ class HandbookPageTemplate extends React.Component {
     const page = get(this.props, 'data.productPage.nodes[0]')
     const handbookNavList = get(this.props, 'data.productNav.nodes')
     // console.log('page context:', this.props)
+    
 
-    // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const coverImageUrl = parseImageUrl(page.Cover[0])
+
+
 
     return (
+      
       <Layout location={this.props.location} >
-        {/* <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
-            <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
-          </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>
-        </div> */}
 
-        {/* <Helmet title={`${page.name} | ${page.name}`} /> */}
 
-        {page.Cover &&
-        <SVG src={page.Cover} /> }
+        {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
+        <Helmet title={`${page.Name} | ${page.Name}`} />
+
+        <Navigation />
+
+
+
+        <h1>{page.Name}</h1>
+        {page.Cover && <img src={coverImageUrl} />}
+        <h2>{page.Subheading}</h2>
 
         <HandbookNavList handbookNavList={handbookNavList} />
 
@@ -74,6 +66,7 @@ query HandbookById($id: String!) {
       id
       url
       html
+      Subheading
     }
   }
   productNav: allProduct {

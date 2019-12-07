@@ -57,6 +57,7 @@ module.exports = {
         }]
       }
     },
+    'gatsby-plugin-theme-ui',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
