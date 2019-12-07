@@ -8,6 +8,7 @@ import BookCover from '../components/book-cover'
 import HandbookPreview from '../components/handbook-preview'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import ArrowIcon from '../components/arrow-icon.js'
+import Footer from '../components/footer.js'
 import styles from '../components/hero.module.css'
 import AshlynBanner from '../components/assets/ashlyn-banner-v2.svg'
 
@@ -24,10 +25,10 @@ class RootIndex extends React.Component {
   render() {
     const handbooks = get(this, 'props.data.allSourceConfig.nodes')
     const productFeature = get(this, 'props.data.allProduct')
-    // console.log('product', productFeature.nodes[0].Name)
+
     
     return (
-    <Parallax pages={3} ref={ref => (this.parallax = ref)}>
+    <Parallax pages={2.9} ref={ref => (this.parallax = ref)}>
       {/* <ParallaxLayer offset={0} speed={0.5}>
         <span onClick={() => this.parallax.scrollTo(1)}>Layers can contain anything</span>
       </ParallaxLayer> */}
@@ -60,18 +61,21 @@ class RootIndex extends React.Component {
 
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <div style={{width: '50%', margin: '5%'}}>
-              <ParallaxLayer offset={1} speed={.4} factor={.2}>
-              <div style={{width: '40%'}}>
-                  <h2>Build products that people love</h2>
-                  <p>Each handbook covers different strategys for product and business opperations. 
-                    Ashlyn.app handbooks are a tool for you to leverage best practice in your team. 
-                  </p>
-                  <ul>
-                    <li>benefit</li>
-                    <li>benefit</li>
-                    <li>benefit</li>
-                  </ul>
-              </div>
+              <ParallaxLayer offset={1} speed={0} factor={.2}>
+                <div style={{width: '40%'}}>
+                    <h2>Build products that people love</h2>
+                    <p>Each handbook covers different strategys for product and business opperations. 
+                      Ashlyn.app handbooks are a tool for you to leverage best practice in your team. 
+                    </p>
+                    <ul>
+                      <li>benefit</li>
+                      <li>benefit</li>
+                      <li>benefit</li>
+                    </ul>
+                </div>
+                <span onClick={() => this.parallax.scrollTo(1.6)}>
+                  <ArrowIcon />
+                </span>
               </ParallaxLayer>
             </div>
             <div style={{width: '50%', margin: '5%'}}>
@@ -82,12 +86,13 @@ class RootIndex extends React.Component {
                 <AshlynPerson style={{marginTop: "-10%"}}/>
               </ParallaxLayer>
             </div>
+
           </div>
 
-          <ParallaxLayer offset={1.5} speed={1}>
+          <ParallaxLayer offset={1.7} speed={.2}>
               <Blob3 style={{marginLeft: '60%'}}/>
             </ParallaxLayer>
-          <ParallaxLayer offset={1.5} speed={0.5}>
+          <ParallaxLayer offset={1.8} speed={0.5}>
             <div className="wrapper">
 
               <div className="HandbookSection" style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
@@ -102,8 +107,12 @@ class RootIndex extends React.Component {
                 </div>
               </div>
             </div>
-        </ParallaxLayer>
+          </ParallaxLayer>
         </div>
+        <ParallaxLayer offset={2.6} speed={-0.1}>
+          <Footer />
+        </ParallaxLayer>
+
       </Layout>
     </Parallax>
     )
