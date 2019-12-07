@@ -1,9 +1,9 @@
 # handbooks
 
+This is the repo for ashlyn.app - a collection of handbooks for product development, opperations, and management.
 
 ## Crucial Commands
 
-This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
 ### `yarn run dev`
 
@@ -22,6 +22,11 @@ Run a production build into `./public` and publish the site to GitHub pages.
 Removes all dependencies, scripts and data from the installation script.
 
 
-notion integration
+### notion integration
+
+All handbooks are written in notion. `gatsby-source-notion-database` is used to scrape a public notion.so table for nested tables and pull in content on build.
 
 `yarn add gatsby-source-notion-database`
+
+### animations
+Animations use react-spring. 
