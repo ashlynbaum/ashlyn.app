@@ -1,0 +1,18 @@
+.boxLine {
+    margin: 5%;
+    border: 4px solid #A9D9F6;
+    box-sizing: border-box;
+    border-radius: 1px;
+    width: 90%;
+    height: 60vh;
+
+}
+
+.box {
+    margin: 5%;
+    background: #F6F8FA;
+    border-radius: 5px;
+    width: 90%;
+    height: 60vh;
+    transform: translate(20px, 5px);
+}

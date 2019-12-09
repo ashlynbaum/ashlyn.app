@@ -1,4 +1,10 @@
 .container {
-    background: #fafafa;
+    background: #243953;
     height: 600px;
+    color: #F6F8FA;
+    padding: 20px;
+}
+
+.contactEmail {
+    margin-top: 10px;
 }

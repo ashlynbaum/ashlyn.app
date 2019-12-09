@@ -9,14 +9,13 @@ import HandbookPreview from '../components/handbook-preview'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import ArrowIcon from '../components/arrow-icon.js'
 import Footer from '../components/footer.js'
-import styles from '../components/hero.module.css'
+import styles from './index.module.css'
 import AshlynBanner from '../components/assets/ashlyn-banner-v2.svg'
 
 // import svgs
 import Blob1 from '../components/assets/blob1.svg'
 import Blob2 from '../components/assets/blob2.svg'
 import Blob3 from '../components/assets/blob3.svg'
-import Box from '../components/assets/box.svg'
 import Mockup from '../components/assets/mockup.svg'
 import AshlynPerson from '../components/assets/ashlyn-lounge-person.svg'
 import AshlynPlants from '../components/assets/ashlyn-lounge-plants.svg'
@@ -47,17 +46,13 @@ class RootIndex extends React.Component {
             </span>
           </ParallaxLayer>
 
-          {/* <ParallaxLayer offset={1.2} speed={-0.2} style={{ pointerEvents: 'none' }}>
-            <Blob1 />
+          <ParallaxLayer offset={1.99} speed={0.45} style={{ pointerEvents: 'none' }}>
+            <div className={styles.box}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.5} speed={0} style={{ pointerEvents: 'none' }}>
-            <Blob2 />
-          </ParallaxLayer> */}
-
-          {/* <ParallaxLayer offset={0} speed={-1} factor={.5}>
-            <AshlynBanner className={styles.ashlynBanner}/>
-          </ParallaxLayer> */}
+          <ParallaxLayer offset={1.99} speed={0.5} style={{ pointerEvents: 'none' }}>
+            <div className={styles.boxLine}></div>
+          </ParallaxLayer>
 
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <div style={{width: '50%', margin: '5%'}}>
@@ -74,7 +69,7 @@ class RootIndex extends React.Component {
                     </ul>
                 </div>
                 <span onClick={() => this.parallax.scrollTo(1.6)}>
-                  <ArrowIcon />
+                  {/* <ArrowIcon /> */}
                 </span>
               </ParallaxLayer>
             </div>
@@ -89,9 +84,11 @@ class RootIndex extends React.Component {
 
           </div>
 
-          <ParallaxLayer offset={1.7} speed={.2}>
+          {/* <ParallaxLayer offset={1.7} speed={.2}>
               <Blob3 style={{marginLeft: '60%'}}/>
-            </ParallaxLayer>
+          </ParallaxLayer> */}
+
+
           <ParallaxLayer offset={1.8} speed={0.5}>
             <div className="wrapper">
 
