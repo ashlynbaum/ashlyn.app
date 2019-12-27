@@ -20,7 +20,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful starter',
   },
-  pathPrefix: '/gatsby-contentful-starter',
+  // pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     {
       resolve: 'gatsby-transformer-remark',

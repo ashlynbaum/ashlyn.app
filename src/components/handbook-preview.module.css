@@ -1,6 +1,8 @@
 .previewTitle {
-  font-size: 1.5em;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 45%, #DCEFF9 45%);
+  display: inline;
 }
+
 
 .tag {
   color: #A0A0A0;

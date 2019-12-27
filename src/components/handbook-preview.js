@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import styles from './article-preview.module.css'
+import styles from './handbook-preview.module.css'
 
 // old article-preview
 // export default ({ article }) => (
@@ -32,13 +32,14 @@ export default ({ handbook, name, description }) => (
 
   <div className={styles.preview}>
       
-      <h3>{name}</h3>
+      <h2 className={styles.previewTitle}>{name}</h2>
+      <div className={styles.headingAfter} />
       <p>{description}</p>
-      <h3 className={styles.previewTitle}>
-        <button>
-        <Link to={`/product-handbook/${handbook.nodes[0].url}`}>see handbook</Link>
-        </button>
-      </h3>
+      
+      <button>
+      <Link to={`/product-handbook/${handbook.nodes[0].url}`}>see handbook</Link>
+      </button>
+
       
 
     {/* <Img alt="" fluid={handbook.heroImage.fluid} /> */}

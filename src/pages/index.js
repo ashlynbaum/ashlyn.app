@@ -11,6 +11,8 @@ import ArrowIcon from '../components/arrow-icon.js'
 import Footer from '../components/footer.js'
 import styles from './index.module.css'
 import AshlynBanner from '../components/assets/ashlyn-banner-v2.svg'
+import StickerCard from '../components/sticker-card.js'
+
 
 // import svgs
 import Blob1 from '../components/assets/blob1.svg'
@@ -19,6 +21,7 @@ import Blob3 from '../components/assets/blob3.svg'
 import Mockup from '../components/assets/mockup.svg'
 import AshlynPerson from '../components/assets/ashlyn-lounge-person.svg'
 import AshlynPlants from '../components/assets/ashlyn-lounge-plants.svg'
+import CheckCircle from '../components/assets/check-circle.svg'
 
 class RootIndex extends React.Component {
   render() {
@@ -27,45 +30,44 @@ class RootIndex extends React.Component {
 
     
     return (
-    <Parallax pages={2.9} ref={ref => (this.parallax = ref)}>
+    <Parallax pages={4} ref={ref => (this.parallax = ref)}>
       {/* <ParallaxLayer offset={0} speed={0.5}>
         <span onClick={() => this.parallax.scrollTo(1)}>Layers can contain anything</span>
       </ParallaxLayer> */}
 
 
-      <Layout location={this.props.location} >
+      <Layout location={this.props.location}>
 
         <div>
           <Helmet />
 
 
-          <ParallaxLayer offset={0} speed={0.5} factor={1}>
+          <ParallaxLayer offset={0} speed={0.5}>
             <Hero />
             <span onClick={() => this.parallax.scrollTo(.8)}>
                 <ArrowIcon />
             </span>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.99} speed={0.45} style={{ pointerEvents: 'none' }}>
+          <ParallaxLayer offset={2.05} speed={0} factor={1} style={{ pointerEvents: 'none' }}>
             <div className={styles.box}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.99} speed={0.5} style={{ pointerEvents: 'none' }}>
+          <ParallaxLayer offset={2} speed={.1} factor={1} style={{ pointerEvents: 'none' }}>
             <div className={styles.boxLine}></div>
           </ParallaxLayer>
 
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <div style={{width: '50%', margin: '5%'}}>
-              <ParallaxLayer offset={1} speed={0} factor={.2}>
-                <div style={{width: '40%'}}>
+              <ParallaxLayer offset={1} speed={0} factor={1}>
+                <div className="benefit" style={{width: '40%'}}>
                     <h2>Build products that people love</h2>
-                    <p>Each handbook covers different strategys for product and business opperations. 
-                      Ashlyn.app handbooks are a tool for you to leverage best practice in your team. 
+                    <p>Hanbooks have strategies for product and business opperations. <a>ashlyn.app</a> handbooks are are sharable resources for you to leverage best practice in your team. 
                     </p>
                     <ul>
-                      <li>benefit</li>
-                      <li>benefit</li>
-                      <li>benefit</li>
+                      <li><CheckCircle /><span>Create shared language</span></li>
+                      <li><CheckCircle /><span>Clear process</span></li>
+                      <li><CheckCircle /><span>Follow best practice</span></li>
                     </ul>
                 </div>
                 <span onClick={() => this.parallax.scrollTo(1.6)}>
@@ -89,24 +91,32 @@ class RootIndex extends React.Component {
           </ParallaxLayer> */}
 
 
-          <ParallaxLayer offset={1.8} speed={0.5}>
-            <div className="wrapper">
+          <ParallaxLayer offset={2} speed={-0.1}>
+            <div className="wrapper-handbooks">
 
-              <div className="HandbookSection" style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
+              <div className="handbook-section">
                 <BookCover />
                 {/* link to product - using workbook/blog pages 
                 passing through product handbook
                 link to slug on welcome*/}
-                <div className="article-list" style={{margin: '6%'}}>
+                <div className="article-list">
                   <div>
-                    <HandbookPreview handbook={productFeature} name="Product Feature Development" description="Building great products one feature at a time."/>
+                    <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
                   </div>
                 </div>
               </div>
             </div>
           </ParallaxLayer>
+
         </div>
-        <ParallaxLayer offset={2.6} speed={-0.1}>
+        {/* <ParallaxLayer offset={2.3} speed={-0.1}>
+          <div className={styles.stickerWrapper}>
+            <div><p>shop</p></div>
+            <StickerCard />
+          </div>
+        </ParallaxLayer> */}
+
+        <ParallaxLayer offset={3.5} speed={-0.1}>
           <Footer />
         </ParallaxLayer>
 
