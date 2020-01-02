@@ -56,7 +56,7 @@ export default class SubscribeForm extends React.Component {
                             type="submit"
                             value="Send" />
                     </form>
-                    <div className={styles.helperText}>Learn when new handbooks are added</div>
+                    <div className={styles.helperText}>Get updates when new handbooks are added.</div>
                 </div>
             </div>
         );

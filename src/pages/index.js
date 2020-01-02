@@ -49,37 +49,34 @@ class RootIndex extends React.Component {
             </span>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2.05} speed={0} factor={1} style={{ pointerEvents: 'none' }}>
-            <div className={styles.box}></div>
+          <ParallaxLayer offset={1} speed={0} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.benefitBox}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={.1} factor={1} style={{ pointerEvents: 'none' }}>
-            <div className={styles.boxLine}></div>
-          </ParallaxLayer>
 
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <div style={{width: '50%', margin: '5%'}}>
-              <ParallaxLayer offset={1} speed={0} factor={1}>
+            <div style={{width: '40%', margin: '0 0 0 15%'}}>
+              <ParallaxLayer offset={1.1} speed={0.2} factor={1}>
                 <div className="benefit" style={{width: '40%'}}>
                     <h2>Build products that people love</h2>
-                    <p>Hanbooks have strategies for product and business opperations. <a>ashlyn.app</a> handbooks are are sharable resources for you to leverage best practice in your team. 
+                    <p>Hanbooks have strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
                     </p>
-                    <ul>
+                    {/* <ul>
                       <li><CheckCircle /><span>Create shared language</span></li>
                       <li><CheckCircle /><span>Clear process</span></li>
                       <li><CheckCircle /><span>Follow best practice</span></li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <span onClick={() => this.parallax.scrollTo(1.6)}>
                   {/* <ArrowIcon /> */}
                 </span>
               </ParallaxLayer>
             </div>
-            <div style={{width: '50%', margin: '5%'}}>
-              <ParallaxLayer offset={1} speed={0.8} factor={.2}>
+            <div style={{width: '40%', margin: '0 5% 0 0'}}>
+              <ParallaxLayer offset={1.05} speed={0.8} factor={.2}>
                 <AshlynPlants style={{marginTop: "-10%"}}/>
               </ParallaxLayer>
-              <ParallaxLayer offset={1.1} speed={.2} factor={.2}>
+              <ParallaxLayer offset={1.15} speed={.2} factor={.2}>
                 <AshlynPerson style={{marginTop: "-10%"}}/>
               </ParallaxLayer>
             </div>
@@ -90,8 +87,15 @@ class RootIndex extends React.Component {
               <Blob3 style={{marginLeft: '60%'}}/>
           </ParallaxLayer> */}
 
+          <ParallaxLayer offset={2.05} speed={0} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.box}></div>
+          </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={-0.1}>
+          <ParallaxLayer offset={2} speed={.3} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.boxLine}></div>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={1.93} speed={0.15} factor={1}>
             <div className="wrapper-handbooks">
 
               <div className="handbook-section">

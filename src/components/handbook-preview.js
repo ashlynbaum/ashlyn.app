@@ -36,11 +36,15 @@ export default ({ handbook, name, description }) => (
       <div className={styles.headingAfter} />
       <p>{description}</p>
       
-      <button>
-      <Link to={`/product-handbook/${handbook.nodes[0].url}`}>see handbook</Link>
-      </button>
+      <Link 
+        to={`/product-handbook/${handbook.nodes[0].url}`}
+      >
+        <button className={styles.submitButton}>
+        Read handbook
+        </button>
+      </Link>
 
-      
+    
 
     {/* <Img alt="" fluid={handbook.heroImage.fluid} /> */}
     {/* <h3 className={styles.previewTitle}>

@@ -154,6 +154,7 @@
   padding-left: 16px;
   padding-right: 40px;
   background-size: 24px;
+  cursor: pointer;
 }
 
 .submitButton:active, .submitButton:focus, .submitButton:visited {
@@ -166,5 +167,6 @@
   padding-left: 16px;
   padding-right: 40px;
   background-size: 24px;
+  cursor: pointer;
 }
 
