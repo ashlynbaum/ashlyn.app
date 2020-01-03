@@ -16,6 +16,7 @@
   align-items: baseline;
   padding-inline-start: 0;
   font-size: 12px;
+  margin: 12px 0 6px 0;
 }
 
 .bar li a{
@@ -31,6 +32,15 @@ li:after {
   color: #DCEFF9;
   font-size: 18px;
   line-height: 12px;
+  transform: translateY(1px);
+  display: inline-block;
 }
 li:first-child:after { content: ""; }
 li:last-child:after { content: ""; }
+
+.active {
+  display: inline-block;
+  border-bottom: 4px solid #DCEFF9;
+  padding: 0 2px 5px 2px;
+  transform: translateY(-2px);
+}
