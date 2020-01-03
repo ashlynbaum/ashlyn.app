@@ -44,13 +44,14 @@ class HandbookPageTemplate extends React.Component {
 
         <HandbookNavList handbookNavList={handbookNavList} />
 
-        <h2 className="section-headline">{page.Name}</h2>
-
-        <div
-              dangerouslySetInnerHTML={{
-                __html: page.html,
-              }}
-            />
+        {/* <h2 className="section-headline">{page.Name}</h2> */}
+        <div className={styles.handbookBody}>
+          <div 
+            dangerouslySetInnerHTML={{
+              __html: page.html,
+            }}
+          />
+        </div>
         {/* add next page component */}
       </Layout>
     )

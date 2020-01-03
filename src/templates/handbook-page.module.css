@@ -23,3 +23,9 @@
   text-align: center;
   color: #7B8997;
 }
+
+.handbookBody {
+  max-width: 710px;
+  margin: 0 auto;
+}
+

@@ -26,7 +26,7 @@
   color: #357BB9;
 }
 
-li:after { 
+.bar li:after { 
   content: "•";
   padding: 0 12px;
   color: #DCEFF9;
@@ -35,10 +35,10 @@ li:after {
   transform: translateY(1px);
   display: inline-block;
 }
-li:first-child:after { content: ""; }
-li:last-child:after { content: ""; }
+.bar li:first-child:after { content: ""; }
+.bar li:last-child:after { content: ""; }
 
-.active {
+.bar .active {
   display: inline-block;
   border-bottom: 4px solid #DCEFF9;
   padding: 0 2px 5px 2px;

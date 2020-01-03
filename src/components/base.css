@@ -141,3 +141,8 @@ a:hover {
   margin-left: 1rem;
 }
 
+/* handbook body */
+.notion-selectable {
+  max-width: 90% !important;
+  padding: 0 5%;
+}
