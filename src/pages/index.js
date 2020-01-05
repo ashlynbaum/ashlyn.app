@@ -87,15 +87,33 @@ class RootIndex extends React.Component {
               <Blob3 style={{marginLeft: '60%'}}/>
           </ParallaxLayer> */}
 
-          <ParallaxLayer offset={2.05} speed={0} factor={1} style={{ pointerEvents: 'none' }}>
-            <div className={styles.box}></div>
-          </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={.3} factor={1} style={{ pointerEvents: 'none' }}>
+
+          {/* <ParallaxLayer offset={2.1} speed={0} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.box}></div>
+          </ParallaxLayer> */}
+
+          <ParallaxLayer offset={2} speed={-.2} factor={1} style={{ pointerEvents: 'none' }}>
             <div className={styles.boxLine}></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.93} speed={0.15} factor={1}>
+          <ParallaxLayer offset={2} speed={1.1} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.boxLine2}></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={2.05} speed={1.7} factor={1} style={{ marginLeft: '5%', pointerEvents: 'none', transform: 'scale(0.7)' }}>
+            <div className={styles.boxLine}></div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={2.1} speed={-.2} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.benefitBox}></div>
+          </ParallaxLayer>
+
+
+
+          {/* <ParallaxLayer offset={2.3} speed={0.15} factor={1} style={{ pointerEvents: 'none' }}>
+            <div className={styles.box2}></div>
+          </ParallaxLayer> */}
+
+          <ParallaxLayer offset={1.86} speed={0} factor={1}>
             <div className="wrapper-handbooks">
 
               <div className="handbook-section">

@@ -1,21 +1,36 @@
 .boxLine {
-    margin: 5% 5% 5% 4%;
+    margin: 5% 5% 5% 50%;
     border: 4px solid #A9D9F6;
     box-sizing: border-box;
     border-radius: 1px;
-    /* width: calc(100% - 10vmin); */
-    height: 55vh;
+    width: 300px;
+    height: 300px;
 }
-
+.boxLine2 {
+    margin: 5% 5% 5% 75%;
+    /* border: 35px solid #DCEFF9; */
+    background-color: #DCEFF9;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+}
 .box {
     margin: 5% 6% 5% 4%;
     background: #F6F8FA;
     border-radius: 5px;
     /* width: calc(100% - 10vmin); */
-    height: 55vh;
+    height: 400px;
     transform: translate(4%, 1%);
 }
-
+.box2 {
+    margin: 10%;
+    background: #F6F8FA;
+    border-radius: 5px;
+    width: calc(100% - 50vmin);
+    height: 300px;
+    /* transform: translate(4%, 1%); */
+}
 .stickerWrapper {
     display: flex;
     align-items: center;
