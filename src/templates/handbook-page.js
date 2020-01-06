@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import HandbookNavList from '../components/handbook-nav-list'
 import { parseImageUrl } from 'notabase/src/utils'
 import Navigation from '../components/navigation'
+import styles from './handbook-page.module.css'
 
 
 class HandbookPageTemplate extends React.Component {
@@ -33,22 +34,25 @@ class HandbookPageTemplate extends React.Component {
 
         <Navigation />
 
+        {/* hero banner */}
+        <div className={styles.hero}>
+          <h1 className={styles.heroTitle}>{page.Name}</h1>
+          {page.Cover && <img src={coverImageUrl} />}
+          <div className={styles.subheading}>{page.Subheading}</div>
+        </div>
 
-
-        <h1>{page.Name}</h1>
-        {page.Cover && <img src={coverImageUrl} />}
-        <h2>{page.Subheading}</h2>
 
         <HandbookNavList handbookNavList={handbookNavList} />
 
-        <h2 className="section-headline">{page.Name}</h2>
-
-        <div
-              dangerouslySetInnerHTML={{
-                __html: page.html,
-              }}
-            />
-
+        {/* <h2 className="section-headline">{page.Name}</h2> */}
+        <div className={styles.handbookBody}>
+          <div 
+            dangerouslySetInnerHTML={{
+              __html: page.html,
+            }}
+          />
+        </div>
+        {/* add next page component */}
       </Layout>
     )
   }

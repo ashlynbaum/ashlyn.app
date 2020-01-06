@@ -1,0 +1,31 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* background: #e1e1e1; */
+  padding-bottom: 40px;
+}
+
+.heroTitle {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 45%, #DCEFF9 45%);
+    display: inline;
+    color: #357BB9;
+}
+
+.hero img {
+  /* max-width: 50%; */
+  max-height: 50vh;
+  width: auto;
+}
+
+.subheading{
+  font-size: 16px;
+  text-align: center;
+  color: #7B8997;
+}
+
+.handbookBody {
+  max-width: 710px;
+  margin: 0 auto;
+}
+
