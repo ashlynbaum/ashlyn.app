@@ -10,6 +10,7 @@ import { parseImageUrl } from 'notabase/src/utils'
 import Breadcrumb from '../components/breadcrumb'
 import styles from './handbook-page.module.css'
 import Sticky from '@wicked_query/react-sticky'
+import { Link } from 'gatsby'
 
 class HandbookPageTemplate extends React.Component {
   constructor() {
@@ -26,7 +27,7 @@ class HandbookPageTemplate extends React.Component {
     // [todo]: if page is products use allProduct, else use handbook data
     const page = get(this.props, 'data.productPage.nodes[0]')
     const handbookNavList = get(this.props, 'data.productNav.nodes')
-    // console.log('page context:', this.props)
+    console.log('page context:', this.props.pageContext)
     // console.log('page', page)
 
     const coverImageUrl = parseImageUrl(page.Cover[0])
@@ -65,6 +66,13 @@ class HandbookPageTemplate extends React.Component {
           />
         </div>
         {/* add next page component */}
+        { this.props.pageContext.next &&
+          <div>
+            <Link to={`/product-handbook/${this.props.pageContext.next.url}`} activeClassName={styles.active}>
+              next page: {this.props.pageContext.next.Name}
+            </Link>
+          </div>
+        }
       </Layout>
     )
   }

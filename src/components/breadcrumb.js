@@ -10,6 +10,11 @@ export default () => (
             ashlyn.app
         </Link>
       </li>
+      <li>        
+        <Link to={`/`}>
+            Handbooks
+        </Link>
+      </li>
       <li>
         <Link to={`/product-handbook/welcome`}>
             Product Feature Development

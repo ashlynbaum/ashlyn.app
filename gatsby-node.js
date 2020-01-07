@@ -37,6 +37,8 @@ exports.createPages = ({ graphql, actions }) => {
               slug: page.url,
               cover: page.Cover,
               name: page.Name,
+              prev: index === 0 ? null : productPages[index - 1],
+              next: index === (productPages.length - 1) ? null : productPages[index + 1]
             },
           })
         })
