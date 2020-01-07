@@ -7,22 +7,29 @@ import SVG from 'react-inlinesvg';
 import Layout from '../components/layout'
 import HandbookNavList from '../components/handbook-nav-list'
 import { parseImageUrl } from 'notabase/src/utils'
-import Navigation from '../components/navigation'
+import Breadcrumb from '../components/breadcrumb'
 import styles from './handbook-page.module.css'
-
+import Sticky from '@wicked_query/react-sticky'
 
 class HandbookPageTemplate extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      offset: 0,
+      offsetSecond: 0,
+
+    };
+  }
+
   render() {
     //product page only 
     // [todo]: if page is products use allProduct, else use handbook data
     const page = get(this.props, 'data.productPage.nodes[0]')
     const handbookNavList = get(this.props, 'data.productNav.nodes')
     // console.log('page context:', this.props)
-    
+    // console.log('page', page)
 
     const coverImageUrl = parseImageUrl(page.Cover[0])
-
-
 
     return (
       
@@ -32,7 +39,10 @@ class HandbookPageTemplate extends React.Component {
         {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
         <Helmet title={`${page.Name} | ${page.Name}`} />
 
-        <Navigation />
+        <Sticky offset={this.state.offset} subscribe={(props) => (this.setState({ offsetSecond: props.height + this.state.offset }))}>
+        <Breadcrumb />
+        </Sticky>
+
 
         {/* hero banner */}
         <div className={styles.hero}>
@@ -41,8 +51,10 @@ class HandbookPageTemplate extends React.Component {
           <div className={styles.subheading}>{page.Subheading}</div>
         </div>
 
+        <Sticky offset={this.state.offsetSecond}>
+              <HandbookNavList handbookNavList={handbookNavList} />
+        </Sticky>
 
-        <HandbookNavList handbookNavList={handbookNavList} />
 
         {/* <h2 className="section-headline">{page.Name}</h2> */}
         <div className={styles.handbookBody}>
