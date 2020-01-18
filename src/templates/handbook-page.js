@@ -11,6 +11,7 @@ import Breadcrumb from '../components/breadcrumb'
 import styles from './handbook-page.module.css'
 import Sticky from '@wicked_query/react-sticky'
 import NextPage from '../components/next-page'
+import About from '../components/fooder-handbook'
 
 class HandbookPageTemplate extends React.Component {
   constructor() {
@@ -65,15 +66,8 @@ class HandbookPageTemplate extends React.Component {
             }}
           />
         </div>
-        {/* add next page component */}
-        {/* { this.props.pageContext.next &&
-          <div>
-            <Link to={`/product-handbook/${this.props.pageContext.next.url}`} activeClassName={styles.active}>
-              next page: {this.props.pageContext.next.Name}
-            </Link>
-          </div>
-        } */}
         <NextPage nextPage={this.props.pageContext.next} />
+        <About />
       </Layout>
     )
   }
@@ -94,7 +88,7 @@ query HandbookById($id: String!) {
       Subheading
     }
   }
-  productNav: allProduct {
+  productNav: allProduct(sort: {fields: Order, order: ASC}) {
     nodes {
       Name
       url

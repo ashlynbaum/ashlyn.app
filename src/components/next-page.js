@@ -7,8 +7,8 @@ export default ({ nextPage }) => (
   <div className={styles.nextBody}>
   { nextPage &&
     <div className={styles.nextContent}>
-        <p>Next Page</p>
-        <h2>{nextPage.Name}</h2>
+        <p className={styles.label}>go to next page</p>
+        <h2 className={styles.pageName}>{nextPage.Name}</h2>
         <Link 
             to={`/product-handbook/${nextPage.url}`}
         >
