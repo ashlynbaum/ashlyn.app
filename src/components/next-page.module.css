@@ -1,6 +1,6 @@
 .nextBody {
     background-color: #DCEFF9;
-    padding: 3rem 0;
+    padding: 4rem 0;
 }
 
 .nextContent {
@@ -15,10 +15,14 @@
 
 .pageName {
   color: #357BB9;
-  margin: 24px 0 0 0;
+  margin: 24px 0 4px 0;
 }
 
-
+.description {
+  color: #357BB9;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
   
 .submitButton {
 height: 40px;
@@ -32,7 +36,8 @@ background-position: right 8px center;
 background-repeat: no-repeat;
 padding: 0 40px 0 16px;
 background-size: 24px;
-margin-top: 16px;
+margin-top: 28px;
+margin-bottom: 16px;
 }
 
 .submitButton a{

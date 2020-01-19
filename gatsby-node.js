@@ -15,6 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
               id
               Name
               url
+              description
             }
           }
         }

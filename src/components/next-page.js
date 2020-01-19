@@ -9,6 +9,7 @@ export default ({ nextPage }) => (
     <div className={styles.nextContent}>
         <p className={styles.label}>go to next page</p>
         <h2 className={styles.pageName}>{nextPage.Name}</h2>
+        <div className={styles.description}>{nextPage.description}</div>
         <Link 
             to={`/product-handbook/${nextPage.url}`}
         >

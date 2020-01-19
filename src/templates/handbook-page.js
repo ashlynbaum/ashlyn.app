@@ -86,6 +86,7 @@ query HandbookById($id: String!) {
       url
       html
       Subheading
+      description
     }
   }
   productNav: allProduct(sort: {fields: Order, order: ASC}) {
