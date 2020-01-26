@@ -11,7 +11,7 @@ import Breadcrumb from '../components/breadcrumb'
 import styles from './handbook-page.module.css'
 import Sticky from '@wicked_query/react-sticky'
 import NextPage from '../components/next-page'
-import About from '../components/fooder-handbook'
+import About from '../components/footer-handbook'
 
 class HandbookPageTemplate extends React.Component {
   constructor() {

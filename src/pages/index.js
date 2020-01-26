@@ -138,7 +138,7 @@ class RootIndex extends React.Component {
           </div>
         </ParallaxLayer> */}
 
-        <ParallaxLayer offset={3.5} speed={-0.1}>
+        <ParallaxLayer offset={3.4} speed={-0.1}>
           <Footer />
         </ParallaxLayer>
 

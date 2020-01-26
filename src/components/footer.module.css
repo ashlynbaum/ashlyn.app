@@ -1,11 +1,60 @@
-.container {
-    background: #243953;
+.footer{
+    background-color: #0E2442;
+    padding: 64px 10%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
     height: 600px;
-    color: #F6F8FA;
-    padding: 20px;
-    font-size: 34px;
+}
+    
+.cta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.footer a {
+  color: white;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #357bb9;
+}
+
+.footer a:hover {
+  border-bottom: 3px solid #294668;
+  color: #357bb9;
 }
 
 .contactEmail {
-    margin-top: 48px;
+  font-size: 46px;
+  line-height: 76px;
+  border-bottom: 4px solid #357bb9;
+}
+
+.header {
+  font-size: 18px;
+  font-weight: 500;
+  color:#357bb9;
+}
+
+.column {
+  margin-top: 64px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.footer hr{
+  margin-bottom: 64px;
+  margin-top: 0px;
+}
+
+.footer ul{
+  padding-left: 0px;
+  list-style-type: none;
+}
+.footer li{
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
