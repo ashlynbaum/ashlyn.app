@@ -1,20 +1,12 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Ashlyn Handbooks",
+  "description": "Gatsby handbook display with notion content",
   "keywords": [
-    "contentful",
+    "notion",
     "gatsby",
     "static",
     "ssg"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
-  "success_url": "/",
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-static"
-    }
-  ]
+  "repository": "https://github.com/ashlynbaum/ashlyn.app",
+  "success_url": "/"
 }
