@@ -1,0 +1,12 @@
+{
+  "name": "Ashlyn Handbooks",
+  "description": "Gatsby handbook display with notion content",
+  "keywords": [
+    "notion",
+    "gatsby",
+    "static",
+    "ssg"
+  ],
+  "repository": "https://github.com/ashlynbaum/ashlyn.app",
+  "success_url": "/"
+}

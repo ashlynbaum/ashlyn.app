@@ -1,0 +1,61 @@
+.previewTitle {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 45%, #DCEFF9 45%);
+  display: inline;
+}
+
+
+.tag {
+  color: #A0A0A0;
+  text-decoration: none;
+  display: inline-block;
+  padding: .33333rem .5rem;
+  line-height: 1;
+  border-radius: 2px;
+  border: 1px solid #A0A0A0;
+  margin-right: .5em;
+}
+
+.submitButton {
+  height: 40px;
+  border: none;
+  background: #2C649C;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding: 0 40px 0 16px;
+  background-size: 24px;
+  margin-top: 48px;
+}
+
+.submitButton a{
+  color: white;
+}
+
+.submitButton:hover {
+  background: #357BB9;
+  box-shadow: 0px 0px 6px #357BB9;
+  border: none;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 40px;
+  background-size: 24px;
+  cursor: pointer;
+}
+
+.submitButton:active, .submitButton:focus, .submitButton:visited {
+  background: #357BB9;
+  outline: none;
+  box-shadow: 0px 0px 6px #2A7657;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 40px;
+  background-size: 24px;
+  cursor: pointer;
+}

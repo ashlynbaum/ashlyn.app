@@ -1,0 +1,149 @@
+/* @font-face {
+  font-family: "inter";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/inter/inter-regular.woff2") format("woff2");
+  font-display: swap;
+} */
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+  font-family: "inter", Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 16px;  
+  line-height: 25px;
+  font-weight: normal;
+  color: #4D5A68;
+  background: #fff;
+  margin: 0;
+  /* border-top: 10px solid; */
+}
+
+input {
+ font-family: "inter", Tahoma, Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+}
+h2 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+}
+h3 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+a {
+  color: #357BB9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4E9CD9;
+}
+
+
+.wrapper {
+  width: calc(100% - 10vmin);
+  margin: 0 auto;
+  padding: 5vmin 0;
+}
+.wrapper-handbooks {
+  width: calc(100% - 20vmin);
+  margin: 0 auto;
+  padding: 5vmin 0;
+}
+
+/**
+ * article grid
+ */
+.article-list {
+  margin: 5% 0 0 7%;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5vmin;
+}
+.handbook-section {
+  /* width: calc(100% - 20vmin); */
+  display: flex;
+  flex-direction: row-reverse;
+  /* align-items: center; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+/**
+ *
+ */
+.section-headline {
+  padding: 0 0 0.4em 0;
+  margin: 0 0 5vmin 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/**
+ *
+ */
+.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-inline li {
+  display: inline-block;
+}
+
+/* benefits section */
+.benefit {
+  max-width: 450px
+}
+
+.benefit h2 {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 45%, #DCEFF9 45%);
+  display: inline;
+}
+
+.benefit p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.benefit ul{
+  margin: 1rem 4px;
+  padding: 0;
+}
+
+.benefit li {
+  list-style: none;
+  line-height: 18px;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.benefit li span {
+  margin-left: 1rem;
+}
+
+/* handbook body */
+.notion-selectable {
+  max-width: 100% !important;
+  padding-bottom: 0.5rem !important;
+}

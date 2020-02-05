@@ -1,0 +1,172 @@
+.arrowWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.hero {
+  background-color: #243953;
+  border-radius: 0 0 20px 20px;
+  -webkit-clip-path: inset(0 round 0 0 20px 20px);
+  clip-path: inset(0 round 0 0 20px 20px);
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.shaddow {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.squiggles {
+  position: absolute;
+  /* z-index: -1; */
+  width: 100%;
+}
+
+.ashlynBanner {
+  z-index: 1;
+}
+
+@media(min-width: 600px) {
+  .heroDetails {
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .heroDetails {
+    font-size: 20px;
+  }
+}
+
+.heroHeadline {
+  margin: 0;
+  font-size: 54px;
+  line-height: 65px;
+}
+
+.heroSubtitle {
+  margin: 0 0 6rem 0;
+  font-size: 1.125em;
+  color: #F6F8FA;
+  font-size: 16px;
+}
+
+.heroRight {
+  display: flex;
+  color: #F6F8FA;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: auto;
+  z-index: 1;
+}
+.heroLeft {
+  display: flex;
+  color: #F6F8FA;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: auto;
+  z-index: 1;
+}
+
+.websiteNameWrapper {
+  margin-bottom: 3rem;
+}
+
+.websiteName {
+  display: initial;
+  align-self: flex-start;
+  padding-bottom: 2px;
+  border-bottom: 4px solid #4E9CD9;
+  margin-bottom: 5rem;
+}
+
+.emailWrapper {
+  font-family: inherit;
+}
+
+.helperText {
+ font-size: 14px;
+ line-height: 19px;
+ padding-top: 10px;
+}
+
+.emailForm {
+  height: 38px;
+  font-size: 16px;
+  background-image: url('../static/ic-outline-email.svg');
+  background-repeat: no-repeat;
+  padding: 0 6px 0 40px;
+  border: 1px solid #B3BDC7;
+  border-radius: 3px;
+  background-position: left;
+  background-position-x: 8px;
+  background-size: 24px;
+  margin-right: 14px;
+
+}
+
+.emailForm::placeholder {
+  color: #B3BDC7;
+  font-size: 16px;
+}
+
+.emailWrapper:hover .emailForm {
+  border: 1px solid #74B9E9;
+}
+
+.emailWrapper:hover .helperText,
+.emailWrapper:focus .helperText {
+  color: #74B9E9;
+}
+
+.emailForm:focus {
+  outline: none;
+  box-shadow: 0px 0px 6px #4e9cd9;
+}
+
+.submitButton {
+  height: 40px;
+  border: none;
+  background: #45B980;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding: 0 40px 0 16px;
+  background-size: 24px;
+}
+
+.submitButton:hover {
+  background: #5ED095;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 40px;
+  background-size: 24px;
+  cursor: pointer;
+}
+
+.submitButton:active, .submitButton:focus, .submitButton:visited {
+  background: #2A7657;
+  outline: none;
+  box-shadow: 0px 0px 6px #2A7657;
+  background-image: url('../static/baseline-arrow_back-24px.svg');
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 40px;
+  background-size: 24px;
+  cursor: pointer;
+}
+
