@@ -1,0 +1,74 @@
+{
+  "name": "ashlyn.app handbook",
+  "description": "gatsby site for displaying handbooks from notion",
+  "version": "1.0.0",
+  "author": "ashlyn baum",
+  "bugs": {
+    "url": "https://github.com/ashlynbaum/ashlyn.app/issues"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@mdx-js/react": "^1.5.3",
+    "@wicked_query/react-sticky": "^1.0.0-rc1",
+    "gatsby-cli": "^2.8.23",
+    "gatsby-image": "^2.2.37",
+    "gatsby-plugin-mailchimp": "^5.1.2",
+    "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-sharp": "^2.3.10",
+    "gatsby-plugin-theme-ui": "^0.2.53",
+    "gatsby-remark-emojis": "^0.3.3",
+    "gatsby-source-notion-database": "^0.6.9",
+    "gatsby-transformer-remark": "^2.6.45",
+    "gatsby-transformer-sharp": "^2.3.9",
+    "lodash": "^4.17.11",
+    "notabase": "^0.8.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.0",
+    "react-inlinesvg": "^1.2.0",
+    "react-spring": "^8.0.27",
+    "sharp": "^0.22.0",
+    "surge": "^0.21.3",
+    "theme-ui": "^0.2.52"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "chalk": "^2.4.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.17.0",
+    "gatsby": "^2.18.18",
+    "gh-pages": "^2.0.1",
+    "inquirer": "^6.2.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^2.6.3",
+    "yargs-parser": "^13.0.0"
+  },
+  "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
+  "keywords": [
+    "gatsby",
+    "contentful"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashlynbaum/ashlyn.app/issues"
+  },
+  "scripts": {
+    "dev": "npm run develop",
+    "develop": "gatsby develop",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
+    "postinstall": "node ./bin/hello.js",
+    "setup": "node ./bin/setup.js",
+    "start": "npm run develop",
+    "heroku-postbuild": "gatsby build",
+    "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf "
+  }
+}

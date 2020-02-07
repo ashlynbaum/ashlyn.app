@@ -1,0 +1,73 @@
+.nextBody {
+    background-color: #DCEFF9;
+    padding: 4rem 0;
+    margin-top: 2rem;
+}
+
+.nextContent {
+    max-width: 644px;
+    margin: 0 auto;
+  }
+
+.label {
+  color: #74B9E9;
+  margin: 0 0 8px 0;
+}
+
+.pageName {
+  color: #357BB9;
+  margin: 24px 0 4px 0;
+}
+
+.description {
+  color: #357BB9;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+  
+.submitButton {
+height: 40px;
+border: none;
+background: #2C649C;
+border-radius: 3px;
+color: white;
+font-size: 16px;
+background-image: url('../static/baseline-arrow_back-24px.svg');
+background-position: right 8px center;
+background-repeat: no-repeat;
+padding: 0 40px 0 16px;
+background-size: 24px;
+margin-top: 28px;
+margin-bottom: 16px;
+}
+
+.submitButton a{
+color: white;
+}
+
+.submitButton:hover {
+background: #357BB9;
+box-shadow: 0px 0px 6px #357BB9;
+border: none;
+background-image: url('../static/baseline-arrow_back-24px.svg');
+background-position: right 8px center;
+background-repeat: no-repeat;
+padding-left: 16px;
+padding-right: 40px;
+background-size: 24px;
+cursor: pointer;
+}
+
+.submitButton:active, .submitButton:focus, .submitButton:visited {
+background: #357BB9;
+outline: none;
+box-shadow: 0px 0px 6px #2A7657;
+background-image: url('../static/baseline-arrow_back-24px.svg');
+background-position: right 8px center;
+background-repeat: no-repeat;
+padding-left: 16px;
+padding-right: 40px;
+background-size: 24px;
+cursor: pointer;
+}
+  
