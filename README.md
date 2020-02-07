@@ -26,9 +26,9 @@ Run in the project locally.
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-### `gatsby deploy`
+### `firebase deploy`
 
-Run a production build into `./public` and publish the site to Firebase pages.
+Run a production build into `./public` and publish the site to Firebase pages. During the init of firebase, use the public folder, remove firebase functions.
 
 
 
