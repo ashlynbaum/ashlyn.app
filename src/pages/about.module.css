@@ -1,8 +1,14 @@
 
-  .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #f0f0f0;
-  }
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 100px;
+}

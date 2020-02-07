@@ -22,7 +22,7 @@ export default () => (
           <Link to="/about/">About</Link>
         </li>
         <li className={styles.navigationItem}>
-          <Link to="/">Articles</Link>
+          <a href="https://medium.com/@ashlynbaum" target="_blank">Articles</a>
         </li>
       </ul>
     </div>
