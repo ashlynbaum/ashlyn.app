@@ -20,7 +20,6 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful starter',
   },
-  // pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     {
       resolve: 'gatsby-transformer-remark',
@@ -74,17 +73,6 @@ module.exports = {
             endpoint: 'https://gmail.us20.list-manage.com/subscribe/post?u=60af8c8f369265bc4fef99726&amp;id=73c6d7ddc5',
         },
     },
-    // {  resolve: 'gatsby-source-notion-database',
-    //     options: {
-    //         sourceConfig : [
-    //            {
-    //               "name": "post",
-    //               configTable: "https://www.notion.so/ashlynbaum/67873ebd7f5e4b8a968cb69909a889b0?v=29cb786f18b14b709878e53bbe966fb1",
-    //               "cacheType": "static"
-    //            }
-    //         ]
-    //     }
-    // }
     {
       resolve: "gatsby-source-notion-database",
       options: {
