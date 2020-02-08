@@ -14,6 +14,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  padding-left: 20px;
   padding-inline-start: 0;
   font-size: 12px;
   margin: 12px 0 6px 0;
@@ -43,4 +44,28 @@
   border-bottom: 4px solid #DCEFF9;
   padding: 0 2px;
   transform: translateY(-5px);
+}
+
+.mobileNav {
+  background-color: black;
+}
+
+/* Small (sm) */
+@media (min-width: 640px) { 
+
+}
+
+/* Medium (md) */
+@media (min-width: 768px) { 
+
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) { 
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { 
+
 }

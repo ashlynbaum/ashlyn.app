@@ -28,6 +28,7 @@
     "react-helmet": "^5.2.0",
     "react-inlinesvg": "^1.2.0",
     "react-spring": "^8.0.27",
+    "react-transition-group": "^4.3.0",
     "sharp": "^0.22.0",
     "surge": "^0.21.3",
     "theme-ui": "^0.2.52"
