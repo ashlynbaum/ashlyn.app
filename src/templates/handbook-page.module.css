@@ -12,12 +12,6 @@
     color: #357BB9;
 }
 
-.hero img {
-  /* max-width: 50%; */
-  max-height: 50vh;
-  width: auto;
-}
-
 .subheading{
   font-size: 16px;
   text-align: center;
@@ -29,3 +23,21 @@
   max-width: 644px;
   margin: 48px auto 7rem auto;
 }
+
+/* Small (sm) */
+@media (min-width: 640px) { 
+  .hero img {
+    /* max-width: 50%; */
+    max-height: 50vh;
+    width: auto;
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) { /* ... */ }
+
+/* Large (lg) */
+@media (min-width: 1024px) { /* ... */ }
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { /* ... */ }

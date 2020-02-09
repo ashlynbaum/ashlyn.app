@@ -26,10 +26,6 @@
   color: #357bb9;
 }
 
-.contactEmail {
-  font-size: 46px;
-  line-height: 76px;
-}
 
 .contactEmail a {
   border-bottom: 4px solid #357bb9;
@@ -68,3 +64,21 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+/* Small (sm) */
+@media (min-width: 640px) { 
+  .contactEmail {
+    font-size: 46px;
+    line-height: 76px;
+  }
+  
+}
+
+/* Medium (md) */
+@media (min-width: 768px) { /* ... */ }
+
+/* Large (lg) */
+@media (min-width: 1024px) { /* ... */ }
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { /* ... */ }

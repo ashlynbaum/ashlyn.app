@@ -40,7 +40,7 @@ class HandbookPageTemplate extends React.Component {
 
 
         {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
-        <Helmet title={`${page.Name} | ${page.Name}`} />
+        <Helmet title={`${page.Name}`} />
 
         <Sticky offset={this.state.offset} subscribe={(props) => (this.setState({ offsetSecond: props.height + this.state.offset }))}>
         <Breadcrumb />
@@ -78,7 +78,7 @@ class HandbookPageTemplate extends React.Component {
             }}
           />
         </div> */}
-        
+
         <NextPage nextPage={this.props.pageContext.next} />
         <About />
       </Layout>
