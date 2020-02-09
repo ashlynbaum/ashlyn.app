@@ -5,6 +5,7 @@ import styles from './next-page.module.css'
 
 export default ({ nextPage }) => (
   <div className={styles.nextBody}>
+    <div className={"container"}>
   { nextPage &&
     <div className={styles.nextContent}>
         <p className={styles.label}>go to next page</p>
@@ -20,5 +21,5 @@ export default ({ nextPage }) => (
     </div>
   }
   </div>
-  
+  </div>
 )

@@ -147,3 +147,34 @@ a:hover {
   max-width: 100% !important;
   padding-bottom: 0.5rem !important;
 }
+
+/* Medium (md) */
+@media (max-width: 768px) { 
+  .container {
+    margin: 5%;
+  }
+}
+
+
+
+/* Small (sm) */
+@media (min-width: 640px) { 
+
+}
+
+/* Medium (md) */
+@media (min-width: 768px) { 
+  .container {
+    padding: 5% 0;
+  }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) { 
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { 
+
+}
