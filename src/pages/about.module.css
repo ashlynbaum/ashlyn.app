@@ -4,11 +4,36 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  min-height: 600px;
+  min-height: 400px;
 }
 
 .content {
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 8px;
 }
+
+/* Small (sm) */
+@media (min-width: 640px) { 
+  .content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+  .main {
+    min-height: 600px;
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) { 
+
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { /* ... */ }
