@@ -181,12 +181,18 @@
 	.container {
 		z-index: 1;
 		perspective:3000px;
-		transform: scale(1);
+		transform: scale(0.7);
 	}	
   }
   
   /* Large (lg) */
-  @media (min-width: 1024px) { /* ... */ }
+  @media (min-width: 1024px) {
+	.container {
+		z-index: 1;
+		perspective:3000px;
+		transform: scale(1);
+	}
+  }
   
   /* Extra Large (xl) */
   @media (min-width: 1280px) { /* ... */ }

@@ -1,0 +1,10 @@
+.arrowBlock {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+  cursor: pointer;
+}
+
+.arrowBlock:hover {
+  opacity: 0.5;
+}

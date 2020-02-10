@@ -27,62 +27,52 @@ class RootIndex extends React.Component {
       return (
 
       <div>
-      <div className={styles.isMobile}>
-        <Layout location={this.props.location}>
+        <div className={styles.isMobile}>
+          <Layout location={this.props.location}>
+            <div>
+              <Helmet />
+              <Hero isMobile={true}/>
+              <span onClick={() => this.parallax.scrollTo(.8)}>
+                  <ArrowIcon />
+              </span>
 
-        <div>
-          <Helmet />
-
-            <Hero isMobile={true}/>
-            <span onClick={() => this.parallax.scrollTo(.8)}>
-                <ArrowIcon />
-            </span>
-
-          {/* <div className={styles.benefitBox}></div> */}
-
-
-          <div>
-            <div style={ {margin: '8%'}}>
-                <div className="benefit">
-                    <h2>Build products that people love</h2>
-                    <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
-                    </p>
-                    <ul>
-                      <li><CheckCircle /><span>Create shared language</span></li>
-                      <li><CheckCircle /><span>Build a cross-functional process</span></li>
-                      <li><CheckCircle /><span>Follow best practice</span></li>
-                    </ul>
-                </div>
-                <span onClick={() => this.parallax.scrollTo(1.6)}>
-                  {/* <ArrowIcon /> */}
-                </span>
-            </div>
-            <div style={{margin: '10%'}}>
-              <AshlynPerson style={{position: 'absolute', width: "85%", height: "auto"}}/>
-              <AshlynPlants style={{ width: "100%", height: "auto"}}/>
-            </div>
-
-          </div>
-
-        <div className={styles.wrapperHandbooks}>
-
-          <div className={styles.handbookSectionMobile}>
-            <BookCover isMobile={true}/>
-            {/* link to product - using workbook/blog pages 
-            passing through product handbook
-            link to slug on welcome*/}
-            <div className={styles.articleList}>
               <div>
-                <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
+                <div style={ {margin: '8%'}}>
+                    <div className="benefit">
+                        <h2>Build products that people love</h2>
+                        <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                        </p>
+                        <ul>
+                          <li><CheckCircle /><span>Create shared language</span></li>
+                          <li><CheckCircle /><span>Build a cross-functional process</span></li>
+                          <li><CheckCircle /><span>Follow best practice</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style={{margin: '10%'}}>
+                  <AshlynPerson style={{position: 'absolute', width: "85%", height: "auto"}}/>
+                  <AshlynPlants style={{ width: "100%", height: "auto"}}/>
+                </div>
+
+              </div>
+
+            <div className={styles.wrapperHandbooks}>
+
+              <div className={styles.handbookSectionMobile}>
+                <BookCover isMobile={true}/>
+                {/* link to product - using workbook/blog pages 
+                passing through product handbook
+                link to slug on welcome*/}
+                <div className={styles.articleList}>
+                  <div>
+                    <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
+                  </div>
+                </div>
               </div>
             </div>
+            <MobileFooter />
           </div>
-        </div>
-        <MobileFooter />
-      </div>
-      </Layout>
-
-
+        </Layout>
       </div>
       <div className={styles.isDesktop}>
         <Parallax pages={4} ref={ref => (this.parallax = ref)}>
