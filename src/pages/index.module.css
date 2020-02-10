@@ -80,6 +80,13 @@
     display: flex;
     flex-direction: column;
 }
+.isDesktop {
+    display: none;
+}
+
+.isMobile {
+    display: block;
+}
 
 /* Small (sm) */
 @media (min-width: 640px) { 
@@ -101,10 +108,18 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-gap: 5vmin;
     }
+    .isDesktop {
+        display: block;
+    }
+    .isMobile {
+        display: none;
+    }
 }
 
 /* Large (lg) */
-@media (min-width: 1024px) { /* ... */ }
+@media (min-width: 1024px) {
+
+}
 
 /* Extra Large (xl) */
 @media (min-width: 1280px) { /* ... */ }
