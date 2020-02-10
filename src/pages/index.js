@@ -207,7 +207,7 @@ class RootIndex extends React.Component {
   }
 }
 
-export default withGetScreen(RootIndex, { mobileLimit: 768})
+export default RootIndex
 
 export const query =  graphql`
 {
