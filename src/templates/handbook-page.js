@@ -12,6 +12,7 @@ import styles from './handbook-page.module.css'
 import Sticky from '@wicked_query/react-sticky'
 import NextPage from '../components/next-page'
 import About from '../components/footer-handbook'
+import PageNav from '../components/responsive-page-nav'
 
 class HandbookPageTemplate extends React.Component {
   constructor() {
@@ -28,7 +29,7 @@ class HandbookPageTemplate extends React.Component {
     // [todo]: if page is products use allProduct, else use handbook data
     const page = get(this.props, 'data.productPage.nodes[0]')
     const handbookNavList = get(this.props, 'data.productNav.nodes')
-    console.log('page context:', this.props.pageContext)
+    // console.log('page context:', this.props.pageContext)
     // console.log('page', page)
 
     const coverImageUrl = parseImageUrl(page.Cover[0])
@@ -39,7 +40,7 @@ class HandbookPageTemplate extends React.Component {
 
 
         {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
-        <Helmet title={`${page.Name} | ${page.Name}`} />
+        <Helmet title={`${page.Name}`} />
 
         <Sticky offset={this.state.offset} subscribe={(props) => (this.setState({ offsetSecond: props.height + this.state.offset }))}>
         <Breadcrumb />
@@ -53,19 +54,31 @@ class HandbookPageTemplate extends React.Component {
           <div className={styles.subheading}>{page.Subheading}</div>
         </div>
 
-        <Sticky offset={this.state.offsetSecond}>
+        <PageNav handbookNavList={handbookNavList} offset={this.state.offsetSecond} />
+        
+        {/* <Sticky offset={this.state.offsetSecond}>
               <HandbookNavList handbookNavList={handbookNavList} />
-        </Sticky>
+        </Sticky> */}
 
+        <div className={'container'}>
+          <div className={styles.handbookBody}>
+            <div 
+              dangerouslySetInnerHTML={{
+                __html: page.html,
+              }}
+            />
+          </div>
+        </div>
 
         {/* <h2 className="section-headline">{page.Name}</h2> */}
-        <div className={styles.handbookBody}>
+        {/* <div className={styles.handbookBody}>
           <div 
             dangerouslySetInnerHTML={{
               __html: page.html,
             }}
           />
-        </div>
+        </div> */}
+
         <NextPage nextPage={this.props.pageContext.next} />
         <About />
       </Layout>

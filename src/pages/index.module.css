@@ -47,3 +47,79 @@
     width: 210px;
     height: 55vh;
 }
+
+
+.articleList {
+    margin: 0 10% 78px 10%;
+    padding: 0;
+    /* list-style: none; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-gap: 5vmin; */
+    width: 80%;
+}
+
+.wrapperHandbooks {
+    /* width: calc(100% - 20vmin);
+    margin: 0 auto;
+    padding: 5vmin 0; */
+}
+
+  
+.handbookSection {
+    /* width: calc(100% - 20vmin); */
+    display: flex;
+    flex-direction: row-reverse;
+    /* align-items: center; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.handbookSectionMobile {
+    /* width: calc(100% - 20vmin); */
+    display: flex;
+    flex-direction: column;
+}
+.isDesktop {
+    display: none;
+}
+
+.isMobile {
+    display: block;
+}
+
+/* Small (sm) */
+@media (min-width: 640px) { 
+
+  }
+  
+/* Medium (md) */
+@media (min-width: 768px) { 
+    .wrapperHandbooks {
+        width: calc(100% - 20vmin);
+        margin: 0 auto;
+        padding: 5vmin 0;
+    }
+    .articleList {
+        margin: 5% 0 0 7%;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 5vmin;
+    }
+    .isDesktop {
+        display: block;
+    }
+    .isMobile {
+        display: none;
+    }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { /* ... */ }

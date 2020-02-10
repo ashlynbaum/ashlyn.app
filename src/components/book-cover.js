@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './book-cover.module.css'
 
-export default () => (
+export default (isMobile) => (
     <div className={styles.container}>
 		<div className={styles.book}>
 			<div className={styles.front}>

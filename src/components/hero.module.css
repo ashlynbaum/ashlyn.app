@@ -11,10 +11,22 @@
   clip-path: inset(0 round 0 0 20px 20px);
 }
 
+.heroMobile {
+  background-color: #243953;
+  border-radius: 0 0 20px 20px;
+  -webkit-clip-path: inset(0 round 0 0 20px 20px);
+  clip-path: inset(0 round 0 0 20px 20px);
+}
+
 .innerWrapper {
   display: flex;
   justify-content: space-evenly;
   height: 90vh;
+}
+
+.innerWrapperMobile {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .shaddow {
@@ -28,8 +40,18 @@
   width: 100%;
 }
 
+.squigglesMobile {
+  display: none;
+}
+
 .ashlynBanner {
   z-index: 1;
+}
+
+.ashlynBannerMobile {
+  width: 50%;
+  margin: 0 auto;
+  height: auto;
 }
 
 @media(min-width: 600px) {
@@ -57,6 +79,13 @@
   font-size: 16px;
 }
 
+.heroSubtitleMobile {
+  margin: 0 0 2rem 0;
+  font-size: 1.125em;
+  color: #F6F8FA;
+  font-size: 16px;
+}
+
 .heroRight {
   display: flex;
   color: #F6F8FA;
@@ -64,6 +93,15 @@
   justify-content: center;
   margin: 0 auto;
   align-items: auto;
+  z-index: 1;
+}
+.heroRightMobile {
+  /* display: flex; */
+  color: #F6F8FA;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  margin: 8%;
+  /* align-items: auto; */
   z-index: 1;
 }
 .heroLeft {
