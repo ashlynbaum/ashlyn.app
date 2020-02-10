@@ -10,6 +10,7 @@ import HandbookPreview from '../components/handbook-preview'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import ArrowIcon from '../components/arrow-icon.js'
 import Footer from '../components/footer.js'
+import MobileFooter from '../components/footer-handbook'
 import styles from './index.module.css'
 
 
@@ -36,32 +37,48 @@ class RootIndex extends React.Component {
                 <ArrowIcon />
             </span>
 
-            <div className={styles.benefitBox}></div>
+          {/* <div className={styles.benefitBox}></div> */}
 
 
-          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <div style={{width: '40%', margin: '0 0 0 15%'}}>
-                <div className="benefit" style={{width: '40%'}}>
+          <div>
+            <div style={ {margin: '8%'}}>
+                <div className="benefit">
                     <h2>Build products that people love</h2>
-                    <p>Hanbooks have strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                    <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
                     </p>
-                    {/* <ul>
+                    <ul>
                       <li><CheckCircle /><span>Create shared language</span></li>
-                      <li><CheckCircle /><span>Clear process</span></li>
+                      <li><CheckCircle /><span>Build a cross-functional process</span></li>
                       <li><CheckCircle /><span>Follow best practice</span></li>
-                    </ul> */}
+                    </ul>
                 </div>
                 <span onClick={() => this.parallax.scrollTo(1.6)}>
                   {/* <ArrowIcon /> */}
                 </span>
             </div>
-            <div style={{width: '40%', margin: '0 5% 0 0'}}>
-                <AshlynPlants style={{marginTop: "-10%"}}/>
-                <AshlynPerson style={{marginTop: "-10%"}}/>
+            <div style={{margin: '10%'}}>
+              <AshlynPerson style={{position: 'absolute', width: "85%", height: "auto"}}/>
+              <AshlynPlants style={{ width: "100%", height: "auto"}}/>
             </div>
 
           </div>
+
+        <div className={styles.wrapperHandbooks}>
+
+          <div className={styles.handbookSectionMobile}>
+            <BookCover isMobile={true}/>
+            {/* link to product - using workbook/blog pages 
+            passing through product handbook
+            link to slug on welcome*/}
+            <div className={styles.articleList}>
+              <div>
+                <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
+              </div>
+            </div>
+          </div>
         </div>
+        <MobileFooter />
+      </div>
       </Layout>
       );
 
@@ -102,7 +119,7 @@ class RootIndex extends React.Component {
                 <ParallaxLayer offset={1.1} speed={0.2} factor={1}>
                   <div className="benefit" style={{width: '40%'}}>
                       <h2>Build products that people love</h2>
-                      <p>Hanbooks have strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                      <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
                       </p>
                       {/* <ul>
                         <li><CheckCircle /><span>Create shared language</span></li>
@@ -157,14 +174,14 @@ class RootIndex extends React.Component {
             </ParallaxLayer> */}
 
             <ParallaxLayer offset={1.86} speed={0} factor={1}>
-              <div className="wrapper-handbooks">
+              <div className={styles.wrapperHandbooks}>
 
-                <div className="handbook-section">
+                <div className={styles.handbookSection}>
                   <BookCover />
                   {/* link to product - using workbook/blog pages 
                   passing through product handbook
                   link to slug on welcome*/}
-                  <div className="article-list">
+                  <div className={styles.articleList}>
                     <div>
                       <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
                     </div>

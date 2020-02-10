@@ -62,31 +62,9 @@ a:hover {
   margin: 0 auto;
   padding: 5vmin 0;
 }
-.wrapper-handbooks {
-  width: calc(100% - 20vmin);
-  margin: 0 auto;
-  padding: 5vmin 0;
-}
 
-/**
- * article grid
- */
-.article-list {
-  margin: 5% 0 0 7%;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5vmin;
-}
-.handbook-section {
-  /* width: calc(100% - 20vmin); */
-  display: flex;
-  flex-direction: row-reverse;
-  /* align-items: center; */
-  justify-content: space-around;
-  align-items: center;
-}
+
+
 
 /**
  *
