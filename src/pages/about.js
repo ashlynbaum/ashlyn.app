@@ -16,7 +16,6 @@ class AboutPage extends React.Component {
         <div className={styles.header}>
           <img src={Image} />
         </div>
-        <Container>
           <div className={styles.content}>
             <h1>👋 Hi, I’m Ashlyn</h1>
             <p>I’m passionate about building great digital products that improve peoples lives. I like to approach complicated problems and design elegant solutions.</p>
@@ -36,7 +35,6 @@ class AboutPage extends React.Component {
           <main className={styles.main}>
             <StickerCard />
           </main>
-        </Container>
         <Footer />
       </div>
 
