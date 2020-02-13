@@ -170,16 +170,21 @@
   line-height: 65px;
 }
 
+
+
 @media(min-width: 321px) {
-  .heroLeft {
-    display: flex;
-    color: #F6F8FA;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: auto;
-    z-index: 1;
+  @media(min-height: 730px) {
+    .heroLeft {
+      display: flex;
+      color: #F6F8FA;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      align-items: auto;
+      z-index: 1;
+    }
   }
+
   .innerWrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -217,6 +222,15 @@
     justify-content: space-evenly;
     flex-direction: row;
     height: 90vh;
+  }
+  .heroLeft {
+    display: flex;
+    color: #F6F8FA;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: auto;
+    z-index: 1;
   }
   
 }
