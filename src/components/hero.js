@@ -14,7 +14,7 @@ import Animation from './animation.css'
 export default ({ data, isMobile }) => {
   const props = useSpring({height: '90vh', from: {height: '110vh'}})
   const propsSmallMobile = useSpring({height: '85vh', from: {height: '110vh'}})
-  const propsMobile = useSpring({height: '88vh', from: {height: '110vh'}})
+  const propsMobile = useSpring({height: '85vh', from: {height: '110vh'}})
 
 
   return (
