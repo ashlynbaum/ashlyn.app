@@ -88,6 +88,25 @@
     display: block;
 }
 
+.isSmallMobileHero {
+    display: block;
+}
+
+.isMobileHero {
+    display: none;
+}
+
+/* Xtra Small (xsm) */
+@media (min-width: 321px) { 
+    .isSmallMobileHero {
+        display: None;
+    }
+    .isMobileHero {
+        display: block;
+    }
+    
+}
+
 /* Small (sm) */
 @media (min-width: 640px) { 
 
@@ -118,7 +137,11 @@
 
 /* Large (lg) */
 @media (min-width: 1024px) {
-
+    .wrapperHandbooks {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5vmin 0;
+    }
 }
 
 /* Extra Large (xl) */

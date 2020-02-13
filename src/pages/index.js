@@ -31,7 +31,14 @@ class RootIndex extends React.Component {
           <Layout location={this.props.location}>
             <div>
               <Helmet />
-              <Hero isMobile={true}/>
+              {/* is smaller than 320px */}
+              <div className={styles.isSmallMobileHero}>
+                <Hero isMobile="isSmallMobile"/>
+              </div>
+              {/* is larger than 320px */}
+              <div className={styles.isMobileHero}>
+                <Hero isMobile="isMobile"/>
+              </div>
               <span onClick={() => this.parallax.scrollTo(.8)}>
                   <ArrowIcon />
               </span>
