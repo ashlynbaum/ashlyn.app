@@ -25,12 +25,16 @@ class RootIndex extends React.Component {
    
 
       return (
-
       <div>
+        <Helmet>
+            <title>ashlyn.app | handbooks</title>
+            <meta name="description" content="Handbooks for building digital products." />
+        </Helmet>
+
         <div className={styles.isMobile}>
           <Layout location={this.props.location}>
             <div>
-              <Helmet />
+
               {/* is smaller than 320px */}
               <div className={styles.isSmallMobileHero}>
                 <Hero isMobile="isSmallMobile"/>
@@ -91,7 +95,6 @@ class RootIndex extends React.Component {
           <Layout location={this.props.location}>
 
             <div>
-              <Helmet />
 
 
               <ParallaxLayer offset={0} speed={0.5}>
