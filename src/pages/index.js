@@ -51,10 +51,10 @@ class RootIndex extends React.Component {
                 <div style={ {margin: '8%'}}>
                     <div className="benefit">
                         <h2>Build products that people love</h2>
-                        <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                        <p>Strategies for product and business operations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
                         </p>
                         <ul>
-                          <li><CheckCircle /><span>Create shared language</span></li>
+                          <li><CheckCircle /><span>Create a shared language</span></li>
                           <li><CheckCircle /><span>Build a cross-functional process</span></li>
                           <li><CheckCircle /><span>Follow best practice</span></li>
                         </ul>
@@ -114,13 +114,13 @@ class RootIndex extends React.Component {
                   <ParallaxLayer offset={1.1} speed={0.2} factor={1}>
                     <div className="benefit" style={{width: '40%'}}>
                         <h2>Build products that people love</h2>
-                        <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                        <p>Strategies for product development and operations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
                         </p>
-                        {/* <ul>
-                          <li><CheckCircle /><span>Create shared language</span></li>
-                          <li><CheckCircle /><span>Clear process</span></li>
+                        <ul>
+                          <li><CheckCircle /><span>Create a shared language</span></li>
+                          <li><CheckCircle /><span>Build a cross-functional process</span></li>
                           <li><CheckCircle /><span>Follow best practice</span></li>
-                        </ul> */}
+                        </ul>
                     </div>
                     <span onClick={() => this.parallax.scrollTo(1.6)}>
                       {/* <ArrowIcon /> */}
