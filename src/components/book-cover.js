@@ -6,9 +6,9 @@ export default (isMobile) => (
 		<div className={styles.book}>
 			<div className={styles.front}>
 				<div className={styles.cover}>
-                    {/* <p className={styles.numUp}>here is some cover text</p> */}
+                    <p className={styles.numUp}>ASHLYN BAUM</p>
                     {/* <h2 className={styles.author}>product feature development</h2> */}
-                    <p className={styles.title}>product feature development</p>
+                    <p className={styles.title}>Product development strategy</p>				
 				</div>
 
 			</div>
