@@ -66,3 +66,6 @@ public
 # secrets
 .contentful.json
 .env*
+
+#firebase
+.firebase/*

@@ -13,17 +13,20 @@ import Animation from './animation.css'
 
 export default ({ data, isMobile }) => {
   const props = useSpring({height: '90vh', from: {height: '110vh'}})
+  const propsSmallMobile = useSpring({height: '85vh', from: {height: '110vh'}})
+  const propsMobile = useSpring({height: '85vh', from: {height: '110vh'}})
+
 
   return (
     <div>
       <div className={styles.shaddow}>
         {/* <Navigation /> */}
-        <animated.div className={isMobile ? styles.heroMobile : styles.hero} style={props}>
-          <div className={isMobile ? styles.innerWrapperMobile : styles.innerWrapper}>
+        <animated.div className={styles.hero} style={(isMobile == "isSmallMobile") ? propsSmallMobile : (isMobile === "isMobile") ? propsMobile : props}>
+          <div className={styles.innerWrapper}>
             <div className={styles.heroLeft}>
               <AshlynBanner className={isMobile ? styles.ashlynBannerMobile : styles.ashlynBanner}/>
             </div>
-            <div className={isMobile ? styles.heroRightMobile : styles.heroRight}>
+            <div className={ styles.heroRight }>
               <div className={styles.websiteNameWrapper}>
                 <div className={styles.websiteName}>ashlyn.app</div>
               </div>

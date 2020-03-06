@@ -22,6 +22,17 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-98SRMYG3N0"
+        ],
+        pluginConfig: {
+          head: true        
+        },
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         // In your gatsby-transformer-remark plugin array

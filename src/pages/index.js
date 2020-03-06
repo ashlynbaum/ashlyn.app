@@ -25,64 +25,65 @@ class RootIndex extends React.Component {
    
 
       return (
-
       <div>
-      <div className={styles.isMobile}>
-        <Layout location={this.props.location}>
+        <Helmet>
+            <title>ashlyn.app | handbooks</title>
+            <meta name="description" content="Handbooks for building digital products." />
+        </Helmet>
 
-        <div>
-          <Helmet />
+        <div className={styles.isMobile}>
+          <Layout location={this.props.location}>
+            <div>
 
-            <Hero isMobile={true}/>
-            <span onClick={() => this.parallax.scrollTo(.8)}>
-                <ArrowIcon />
-            </span>
+              {/* is smaller than 320px */}
+              <div className={styles.isSmallMobileHero}>
+                <Hero isMobile="isSmallMobile"/>
+              </div>
+              {/* is larger than 320px */}
+              <div className={styles.isMobileHero}>
+                <Hero isMobile="isMobile"/>
+              </div>
+              <span onClick={() => this.parallax.scrollTo(.8)}>
+                  <ArrowIcon />
+              </span>
 
-          {/* <div className={styles.benefitBox}></div> */}
-
-
-          <div>
-            <div style={ {margin: '8%'}}>
-                <div className="benefit">
-                    <h2>Build products that people love</h2>
-                    <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
-                    </p>
-                    <ul>
-                      <li><CheckCircle /><span>Create shared language</span></li>
-                      <li><CheckCircle /><span>Build a cross-functional process</span></li>
-                      <li><CheckCircle /><span>Follow best practice</span></li>
-                    </ul>
-                </div>
-                <span onClick={() => this.parallax.scrollTo(1.6)}>
-                  {/* <ArrowIcon /> */}
-                </span>
-            </div>
-            <div style={{margin: '10%'}}>
-              <AshlynPerson style={{position: 'absolute', width: "85%", height: "auto"}}/>
-              <AshlynPlants style={{ width: "100%", height: "auto"}}/>
-            </div>
-
-          </div>
-
-        <div className={styles.wrapperHandbooks}>
-
-          <div className={styles.handbookSectionMobile}>
-            <BookCover isMobile={true}/>
-            {/* link to product - using workbook/blog pages 
-            passing through product handbook
-            link to slug on welcome*/}
-            <div className={styles.articleList}>
               <div>
-                <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
+                <div style={ {margin: '8%'}}>
+                    <div className="benefit">
+                        <h2>Build products that people love</h2>
+                        <p>Strategies for product and business operations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                        </p>
+                        <ul>
+                          <li><CheckCircle /><span>Create a shared language</span></li>
+                          <li><CheckCircle /><span>Build a cross-functional process</span></li>
+                          <li><CheckCircle /><span>Follow best practice</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style={{margin: '10%'}}>
+                  <AshlynPerson style={{position: 'absolute', width: "85%", height: "auto"}}/>
+                  <AshlynPlants style={{ width: "100%", height: "auto"}}/>
+                </div>
+
+              </div>
+
+            <div className={styles.wrapperHandbooks}>
+
+              <div className={styles.handbookSectionMobile}>
+                <BookCover isMobile={true}/>
+                {/* link to product - using workbook/blog pages 
+                passing through product handbook
+                link to slug on welcome*/}
+                <div className={styles.articleList}>
+                  <div>
+                    <HandbookPreview handbook={productFeature} name="Product Development" description="Building great products one feature at a time."/>
+                  </div>
+                </div>
               </div>
             </div>
+            <MobileFooter />
           </div>
-        </div>
-        <MobileFooter />
-      </div>
-      </Layout>
-
-
+        </Layout>
       </div>
       <div className={styles.isDesktop}>
         <Parallax pages={4} ref={ref => (this.parallax = ref)}>
@@ -94,7 +95,6 @@ class RootIndex extends React.Component {
           <Layout location={this.props.location}>
 
             <div>
-              <Helmet />
 
 
               <ParallaxLayer offset={0} speed={0.5}>
@@ -114,13 +114,13 @@ class RootIndex extends React.Component {
                   <ParallaxLayer offset={1.1} speed={0.2} factor={1}>
                     <div className="benefit" style={{width: '40%'}}>
                         <h2>Build products that people love</h2>
-                        <p>Strategies for product and business opperations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
+                        <p>Strategies for product development and operations. <a>ashlyn.app</a> handbooks are a sharable resources for you to build best practice in your team. 
                         </p>
-                        {/* <ul>
-                          <li><CheckCircle /><span>Create shared language</span></li>
-                          <li><CheckCircle /><span>Clear process</span></li>
+                        <ul>
+                          <li><CheckCircle /><span>Create a shared language</span></li>
+                          <li><CheckCircle /><span>Build a cross-functional process</span></li>
                           <li><CheckCircle /><span>Follow best practice</span></li>
-                        </ul> */}
+                        </ul>
                     </div>
                     <span onClick={() => this.parallax.scrollTo(1.6)}>
                       {/* <ArrowIcon /> */}

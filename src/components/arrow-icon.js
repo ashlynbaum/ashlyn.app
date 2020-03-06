@@ -1,15 +1,11 @@
 import React from 'react'
 import {Spring, animated, config} from 'react-spring/renderprops'
+import styles from './arrow-icon.module.css'
 
 export default ({ data }) => {
 
   return (
-    <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        margin: '1rem 0 1rem 0'
-      }}
-    >
+    <div className={styles.arrowBlock}>
       <Spring
         native
         reset
@@ -25,7 +21,7 @@ export default ({ data }) => {
             // viewBox="0 0 24 24"
             fill="none"
             stroke="#7B8997"
-            stroke-width="2"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeDasharray={100}
