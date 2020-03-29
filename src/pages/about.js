@@ -29,7 +29,7 @@ class AboutPage extends React.Component {
               <li>better designed for making content more accessible.</li>
             </ul>
             <h1>Get in touch</h1>
-            <p>Do you want to have a short chat with me, or do you have any feedback on my handbooks? I work on the Wellington (GMT +13) time zone. Contact me at <a href="mailto:hey@ashlyn.app">hey@ashlyn.app</a></p>
+            <p>Do you want to have a short chat with me, or do you have any feedback on my handbooks? I work on the Wellington (GMT +13) time zone. Contact me at <a href="mailto:hey@ashlyn.app">hey@ashlyn.app</a>.</p>
           </div>
           <main className={styles.main}>
             <StickerCard />
