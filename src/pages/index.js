@@ -17,6 +17,8 @@ import styles from './index.module.css'
 import AshlynPerson from '../components/assets/ashlyn-lounge-person.svg'
 import AshlynPlants from '../components/assets/ashlyn-lounge-plants.svg'
 import CheckCircle from '../components/assets/check-circle.svg'
+import DotBlob from '../components/assets/dotblob.svg'
+import SmallLines from '../components/assets/small-lines.svg'
 
 class RootIndex extends React.Component {
   render() {
@@ -128,10 +130,10 @@ class RootIndex extends React.Component {
                   </ParallaxLayer>
                 </div>
                 <div style={{width: '40%', margin: '0 5% 0 0'}}>
-                  <ParallaxLayer offset={1.05} speed={0.8} factor={.2}>
+                  <ParallaxLayer offset={1.15} speed={0.3} factor={.2}>
                     <AshlynPlants style={{marginTop: "-10%"}}/>
                   </ParallaxLayer>
-                  <ParallaxLayer offset={1.15} speed={.2} factor={.2}>
+                  <ParallaxLayer offset={1.2} speed={.15} factor={.2}>
                     <AshlynPerson style={{marginTop: "-10%"}}/>
                   </ParallaxLayer>
                 </div>
@@ -148,16 +150,25 @@ class RootIndex extends React.Component {
                 <div className={styles.box}></div>
               </ParallaxLayer> */}
 
-              <ParallaxLayer offset={2} speed={-.2} factor={1} style={{ pointerEvents: 'none' }}>
+              {/* <ParallaxLayer offset={2} speed={-.2} factor={1} style={{ pointerEvents: 'none' }}>
                 <div className={styles.boxLine}></div>
+              </ParallaxLayer> */}
+
+              <ParallaxLayer offset={2} speed={.1} factor={1} style={{ marginLeft: '5%', pointerEvents: 'none', transform: 'scale(0.7)' }}>
+                {/* <div className={styles.boxLine}></div> */}
+                <DotBlob style={{marginLeft: '40%', marginTop: '-150px', transform: 'scale(1)'}}/>
               </ParallaxLayer>
 
-              <ParallaxLayer offset={2} speed={1.1} factor={1} style={{ pointerEvents: 'none' }}>
+              <ParallaxLayer offset={2.2} speed={-.1} factor={.2}>
+                {/* <div className={styles.boxLine}></div> */}
+                <SmallLines style={{marginLeft: '85%', marginTop: '-200px', transform: 'scale(0.8)'}}/>
+              </ParallaxLayer>
+
+
+              {/* <ParallaxLayer offset={2} speed={1.1} factor={1} style={{ pointerEvents: 'none' }}>
                 <div className={styles.boxLine2}></div>
-              </ParallaxLayer>
-              <ParallaxLayer offset={2.05} speed={1.7} factor={1} style={{ marginLeft: '5%', pointerEvents: 'none', transform: 'scale(0.7)' }}>
-                <div className={styles.boxLine}></div>
-              </ParallaxLayer>
+              </ParallaxLayer> */}
+
               <ParallaxLayer offset={2.1} speed={-.2} factor={1} style={{ pointerEvents: 'none' }}>
                 <div className={styles.benefitBox}></div>
               </ParallaxLayer>
