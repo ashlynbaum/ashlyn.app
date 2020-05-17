@@ -19,6 +19,7 @@ import AshlynPlants from '../components/assets/ashlyn-lounge-plants.svg'
 import CheckCircle from '../components/assets/check-circle.svg'
 import DotBlob from '../components/assets/dotblob.svg'
 import SmallLines from '../components/assets/small-lines.svg'
+import Book from '../components/assets/book.png'
 
 class RootIndex extends React.Component {
   render() {
@@ -30,7 +31,10 @@ class RootIndex extends React.Component {
       <div>
         <Helmet>
             <title>ashlyn.app | handbooks</title>
-            <meta name="description" content="Handbooks for building digital products." />
+            <meta name="description" content="Building great digital products. A simple guide for running product operations in any team." />
+            <link rel="canonical" href="http://ashlyn.app" />
+            <meta name="image" content={Book} />
+
         </Helmet>
 
         <div className={styles.isMobile}>

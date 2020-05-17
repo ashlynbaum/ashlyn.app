@@ -8,7 +8,7 @@ export default (isMobile) => (
 				<div className={styles.cover}>
                     <p className={styles.numUp}>ASHLYN BAUM</p>
                     {/* <h2 className={styles.author}>product feature development</h2> */}
-                    <p className={styles.title}>Product Development</p>				
+                    <p className={styles.title}>Digital Product Development</p>				
 				</div>
 
 			</div>
