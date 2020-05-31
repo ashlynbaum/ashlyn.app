@@ -19,21 +19,22 @@ import AshlynPlants from '../components/assets/ashlyn-lounge-plants.svg'
 import CheckCircle from '../components/assets/check-circle.svg'
 import DotBlob from '../components/assets/dotblob.svg'
 import SmallLines from '../components/assets/small-lines.svg'
-import Book from '../components/assets/book.png'
+import MetaImage from '../../static/ashlyn-handbook-meta.png'
 
 class RootIndex extends React.Component {
   render() {
     const handbooks = get(this, 'props.data.allSourceConfig.nodes')
     const productFeature = get(this, 'props.data.allProduct')
-   
+    // const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl')
 
       return (
       <div>
         <Helmet>
-            <title>ashlyn.app | handbooks</title>
-            <meta name="description" content="Building great digital products. A simple guide for running product operations in any team." />
+            <title>Ashlyn.app | Handbooks</title>
+            <meta name="description" content="Build great digital products. Ashlyn.app is the best resources for product operations and strategies to launch successful digital products." />
             <link rel="canonical" href="http://ashlyn.app" />
-            <meta name="image" content={Book} />
+            <meta property="og:image" content={`https://ashlyn.app${MetaImage}`} />
+
 
         </Helmet>
 
