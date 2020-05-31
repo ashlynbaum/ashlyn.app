@@ -75,7 +75,7 @@
   .footer{
     display: flex;
     justify-content: space-between;
-    padding: 64px 10%;
+    padding: 3rem 10% 6rem 10%;
   }
 
   .header {
