@@ -34,8 +34,7 @@ class RootIndex extends React.Component {
             <meta name="description" content="Build great digital products. Ashlyn.app is the best resources for product operations and strategies to launch successful digital products." />
             <link rel="canonical" href="http://ashlyn.app" />
             <meta property="og:image" content={`https://ashlyn.app${MetaImage}`} />
-
-
+            <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/party-popper_1f389.png"></link>
         </Helmet>
 
         <div className={styles.isMobile}>
