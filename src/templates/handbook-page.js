@@ -13,6 +13,8 @@ import Sticky from '@wicked_query/react-sticky'
 import NextPage from '../components/next-page'
 import About from '../components/footer-handbook'
 import PageNav from '../components/responsive-page-nav'
+import MetaImage from '../../static/ashlyn-handbook-meta.png'
+
 
 class HandbookPageTemplate extends React.Component {
   constructor() {
