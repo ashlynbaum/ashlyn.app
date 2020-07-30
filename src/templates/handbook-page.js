@@ -44,7 +44,7 @@ class HandbookPageTemplate extends React.Component {
         {/* <Helmet title={`${post.title} | ${siteTitle}`} /> */}
         {/* <Helmet title={`${page.Name}`} /> */}
         <Helmet>
-            <title>`${page.Name}` | Ashlyn.app | Handbooks</title>
+            <title> {page.Name} | ashlyn.app | Handbooks</title>
             <meta name="description" content="Build great digital products. Ashlyn.app is the best resources for product operations and strategies to launch successful digital products." />
             <link rel="canonical" href="http://ashlyn.app" />
             <meta property="og:image" content={`https://ashlyn.app${MetaImage}`} />

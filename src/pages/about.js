@@ -16,7 +16,7 @@ class AboutPage extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Ashlyn.app | Handbooks</title>
+          <title>ashlyn.app | Handbooks</title>
           <meta name="description" content="Build great digital products. Ashlyn.app is the best resources for product operations and strategies to launch successful digital products." />
           <link rel="canonical" href="http://ashlyn.app" />
           <meta property="og:image" content={`https://ashlyn.app${MetaImage}`} />
