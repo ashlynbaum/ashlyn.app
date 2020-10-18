@@ -10,6 +10,7 @@
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
     "@wicked_query/react-sticky": "^1.0.0-rc1",
+    "gatsby": "^2.24.80",
     "gatsby-cli": "^2.8.23",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-google-gtag": "^1.1.22",
@@ -19,11 +20,10 @@
     "gatsby-plugin-sharp": "^2.3.10",
     "gatsby-plugin-theme-ui": "^0.2.53",
     "gatsby-remark-emojis": "^0.3.3",
-    "gatsby-source-notion-database": "^0.6.9",
+    "gatsby-source-ghost": "^4.2.1",
     "gatsby-transformer-remark": "^2.6.45",
     "gatsby-transformer-sharp": "^2.3.9",
-    "lodash": "^4.17.11",
-    "notabase": "^0.8.3",
+    "lodash": "^4.17.20",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
@@ -32,7 +32,8 @@
     "react-transition-group": "^4.3.0",
     "sharp": "^0.22.0",
     "surge": "^0.21.3",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.2.52",
+    "yargs-parser": "^13.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -40,12 +41,10 @@
     "dotenv": "^8.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.17.0",
-    "gatsby": "^2.18.18",
     "gh-pages": "^2.0.1",
     "inquirer": "^6.2.2",
     "prettier": "^1.19.1",
-    "rimraf": "^2.6.3",
-    "yargs-parser": "^13.0.0"
+    "rimraf": "^2.6.3"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [

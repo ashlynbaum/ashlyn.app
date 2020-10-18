@@ -18,9 +18,16 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Ashlyn Handbook',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-ghost`,
+      options: {
+        apiUrl: `https://ghost.ashlyn.app`,
+        contentApiKey: `a7346f5d5dc3192f62cf3e3b83`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -84,12 +91,6 @@ module.exports = {
             endpoint: 'https://gmail.us20.list-manage.com/subscribe/post?u=60af8c8f369265bc4fef99726&amp;id=73c6d7ddc5',
         },
     },
-    {
-      resolve: "gatsby-source-notion-database",
-      options: {
-        configTable: "https://www.notion.so/ashlynbaum/2eb7999026f1465ea58832e1620dcdb6?v=a4e2bccfea4a4087b3fcd18f35c18d91"
-      }
-    }
   ],
 };
 
