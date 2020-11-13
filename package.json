@@ -1,11 +1,4 @@
 {
-  "name": "ashlyn.app handbook",
-  "description": "gatsby site for displaying handbooks from notion",
-  "version": "1.0.0",
-  "author": "ashlyn baum",
-  "bugs": {
-    "url": "https://github.com/ashlynbaum/ashlyn.app/issues"
-  },
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
