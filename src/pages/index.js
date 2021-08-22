@@ -209,20 +209,20 @@ class RootIndex extends React.Component {
 
 export default RootIndex
 
-export const query =  graphql`
-{
-  allProduct(sort: {fields: Order, order: ASC}){
-    nodes {
-      Cover
-      Order
-      Name
-      url
-    }
-  }
-  allSourceConfig {
-    nodes {
-      name
-    }
-  }
-}
-`
+// export const query =  graphql`
+// {
+//   allProduct(sort: {fields: Order, order: ASC}){
+//     nodes {
+//       Cover
+//       Order
+//       Name
+//       url
+//     }
+//   }
+//   allSourceConfig {
+//     nodes {
+//       name
+//     }
+//   }
+// }
+// `

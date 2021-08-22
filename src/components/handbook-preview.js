@@ -37,7 +37,7 @@ export default ({ handbook, name, description }) => (
       <p>{description}</p>
       
       <Link 
-        to={`/product-handbook/${handbook.nodes[0].url}`}
+        to={`https://product-handbook.ashlyn.app/`}
       >
         <button className={styles.submitButton}>
         Read handbook
