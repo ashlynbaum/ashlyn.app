@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
@@ -11,6 +11,7 @@ import ArrowIcon from '../components/arrow-icon.js'
 import Footer from '../components/footer.js'
 import MobileFooter from '../components/footer-handbook'
 import styles from './index.module.css'
+import runOneSignal from '../components/onesignal'
 
 
 // import svgs
@@ -18,12 +19,16 @@ import AshlynPerson from '../components/assets/ashlyn-lounge-person.svg'
 import AshlynPlants from '../components/assets/ashlyn-lounge-plants.svg'
 import CheckCircle from '../components/assets/check-circle.svg'
 
+
 class RootIndex extends React.Component {
+
+  componentDidUpdate() { runOneSignal()    }
+
   render() {
     const handbooks = get(this, 'props.data.allSourceConfig.nodes')
     const productFeature = get(this, 'props.data.allProduct')
-   
-
+    
+    
       return (
       <div>
         <Helmet>

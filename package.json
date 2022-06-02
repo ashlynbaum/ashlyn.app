@@ -1,5 +1,5 @@
 {
-  "name": "ashlyn.app handbook",
+  "name": "ashlyn-handbook",
   "description": "gatsby site for displaying handbooks from notion",
   "version": "1.0.0",
   "author": "ashlyn baum",
@@ -28,6 +28,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
     "react-inlinesvg": "^1.2.0",
+    "react-onesignal": "^2.0.4",
     "react-spring": "^8.0.27",
     "react-transition-group": "^4.3.0",
     "sharp": "^0.22.0",
